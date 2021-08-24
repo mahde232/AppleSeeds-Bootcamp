@@ -3,7 +3,8 @@
 }
 .header {
     margin: 5px auto;
-    width: 650px;
+    /* width: 650px; */
+    width: calc(100% - 400px);
     border: 1px solid black;
     background: orange;
     text-align: center;
@@ -29,14 +30,14 @@
 }
 
 .container {
-    width: 650px;
+    width: calc(100% - 400px);
     height: 40rem;
     margin: auto auto;
 }
 
 .footer {
     margin: 5px auto;
-    width: 650px;
+    width: calc(100% - 400px);
     border: 1px solid black;
     background: rgb(10, 10, 255);
     text-align: center;
