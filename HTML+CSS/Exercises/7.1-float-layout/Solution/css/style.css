@@ -1,0 +1,51 @@
+.header {
+    margin: 5px auto;
+    width: 650px;
+    border: 1px solid black;
+    background: orange;
+    text-align: center;
+    padding: 15px;
+}
+
+.aside {
+    height: 100%;
+    width: 29.5%;
+    border: 1px solid black;
+    background: green;
+    text-align: left;
+    float: left;
+}
+
+.main {
+    height: 100%;
+    width: 69.5%;
+    border: 1px solid black;
+    background: purple;
+    text-align: right;
+    float: right;
+}
+
+.container {
+    width: 680px;
+    height: 40rem;
+    margin: auto auto;
+}
+
+.footer {
+    margin: 5px auto;
+    width: 650px;
+    border: 1px solid black;
+    background: rgb(10, 10, 255);
+    text-align: center;
+    padding: 15px;
+}
+
+.sideDiv {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.mainDiv {
+    margin-right: 10px;
+    margin-top: 10px;
+}
