@@ -1,8 +1,16 @@
+body {
+  font-family: 'Bebas Neue', cursive;
+  
+}
+
 .card {
     --card-gradient: rgba(0, 0, 0, 0.8);
     --card-gradient: #5e9ad9, #e271ad;
     --card-blend-mode: overlay;
 
+    color: skyblue;
+    margin: 0.3rem;
+    float: left;
     width: 32%;
     border-radius: 0.5rem;
     box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
@@ -13,18 +21,18 @@
      overflow: hidden;
 }
 .card img {
-    width:80%;
-    margin-right: 10%;
     margin-left: 10%;
-    margin-top: 2%;
+    object-fit: cover;
+    width: 80%;
+    height: 300px;
+}
+
+.card div {
+    padding-left: 56px;
 }
 
 .card h3 {
   margin-top: 0.1rem;
   font-size: 1.25rem;
   text-align: center;
-}
-
-.card div {
-    padding-left: 60px;
 }
