@@ -1,0 +1,29 @@
+.card {
+    --card-gradient: rgba(0, 0, 0, 0.8);
+    --card-gradient: #5e9ad9, #e271ad;
+    --card-blend-mode: overlay;
+
+    width: 32%;
+    border-radius: 0.5rem;
+    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+    background-image: linear-gradient(
+    var(--card-gradient),
+    white max(9.5rem, 27vh)
+     );
+     overflow: hidden;
+}
+.card img {
+    width:80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.card h3 {
+  margin-top: 0.1rem;
+  font-size: 1.25rem;
+  text-align: center;
+}
+.desc a{
+    margin-top: 100px;
+}
