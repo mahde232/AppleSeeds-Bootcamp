@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .header {
     margin: 5px auto;
     width: 650px;
@@ -26,7 +30,7 @@
 }
 
 .container {
-    width: 680px;
+    width: 650px;
     height: 40rem;
     margin: auto auto;
 }
