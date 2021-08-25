@@ -92,7 +92,10 @@ p {
 #navbar {
   background: #333;
   color: #fff;
-  overflow: auto;
+  /* overflow: auto; */
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 #navbar a {
@@ -129,6 +132,7 @@ p {
 #showcase {
   background: url('../img/showcase.jpg') no-repeat center center/cover;
   height: 600px;
+  padding-top: 50px;
 }
 
 #showcase .showcase-content {
@@ -185,6 +189,10 @@ p {
 }
 
 /* About Info */
+#about-info {
+  padding-top: 100px;
+}
+
 #about-info .info-right {
   float: right;
   width: 50%;
@@ -232,6 +240,10 @@ p {
 }
 
 /* Contact Form */
+#contact-form {
+  padding-top: 100px;
+}
+
 #contact-form .form-group {
   margin-bottom: 20px;
 }
