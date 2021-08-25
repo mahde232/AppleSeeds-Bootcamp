@@ -1,0 +1,45 @@
+.content {
+    margin-top: 60px;
+    font-size: 70px;
+}
+.navbar {
+    list-style: none;
+    padding: 0px 0px;
+    background: #4c6ca0;
+    position: fixed;
+    margin-bottom: 60px;
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navbar2 {
+    background: #4c6ca0;
+    position: sticky;
+    margin-bottom: 60px;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar li {
+    float: left;
+}
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 15px;
+}
+.navbar li a:hover {
+    background: lightgrey;
+}
+
+.navbar2 a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+}
+.navbar2 a:hover {
+    background: lightgrey;
+}
