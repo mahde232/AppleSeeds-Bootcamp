@@ -3,19 +3,18 @@ body {
 }
 div {
     background: white;
+    position: absolute;
 }
 .divone {
     border: 2px solid black;
     height: 150px;
     width: 200px;
-    position: absolute;
     z-index: 1;
 }
 .divtwo {
     border: 2px solid black;
     height: 150px;
     width: 150px;
-    position: absolute;
     top: 70px;
     left: 100px;
     z-index: 2;
@@ -24,7 +23,6 @@ div {
     border: 2px solid black;
     height: 100px;
     width: 450px;
-    position: absolute;
     top: 200px;
     z-index: 3;
 }
@@ -32,7 +30,6 @@ div {
     border: 2px solid black;
     height: 400px;
     width: 100px;
-    position: absolute;
     left: 300px;
     z-index: 4;
 }
