@@ -1,0 +1,111 @@
+* {
+    background: lightskyblue;
+    /* box-sizing: border-box; */
+}
+
+div {
+    max-width: 500px;
+    margin: 10px auto;
+}
+a {
+    text-decoration: none;
+    color: white;
+    margin: 10px 10px;
+}
+.title {
+    color: white;
+}
+.text {
+    font-size: 30px;
+    text-align: center;
+}
+a {
+    padding: 5px 20px;
+}
+.register {
+    font-size: 26px;
+}
+.clear {
+    font-size: 20px;
+}
+.submit {
+    font-size: 12px;
+}
+.flat .register {
+    background: lightgreen;
+}
+.flat .register:hover {
+    background: lime;
+}
+.flat .clear {
+    background: red;
+}
+.flat .clear:hover {
+    background: maroon;
+}
+.flat .submit {
+    background: blue;
+}
+.flat .submit:hover {
+    background: darkblue;
+}
+.round .register {
+    background: orange;
+    border-radius: 20px;
+}
+.round .register:hover {
+    background: darkorange;
+}
+.round .clear {
+    background: rgb(167, 167, 16);
+    border-radius: 20px;
+}
+.round .clear:hover {
+    background: yellowgreen;
+}
+.round .submit {
+    background: grey;
+    border-radius: 20px;
+}
+.round .submit:hover {
+    background: darkgrey;
+}
+.flatghost .register {
+    border: 2px solid green;
+}
+.flatghost .clear {
+    border: 2px solid red;
+}
+.flatghost .submit {
+    border: 2px solid blue;
+}
+.flatghost .register:hover {
+    background: green;
+}
+.flatghost .clear:hover {
+    background: red;
+}
+.flatghost .submit:hover {
+    background: blue;
+}
+.roundghost .register {
+    border: 2px solid green;
+    border-radius: 20px;
+}
+.roundghost .clear {
+    border: 2px solid red;
+    border-radius: 20px;
+}
+.roundghost .submit {
+    border: 2px solid blue;
+    border-radius: 20px;
+}
+.roundghost .register:hover {
+    background: green;
+}
+.roundghost .clear:hover {
+    background: red;
+}
+.roundghost .submit:hover {
+    background: blue;
+}
