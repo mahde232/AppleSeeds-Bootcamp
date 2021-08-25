@@ -6,6 +6,7 @@ body {
     height: 100px;
     background: darkcyan;
     margin: 50px;
+    position: absolute;
 }
 #inner {
     width: 50px;
