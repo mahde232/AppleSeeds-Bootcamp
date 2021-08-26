@@ -93,7 +93,7 @@ p {
   background: #333;
   color: #fff;
   /* overflow: auto; */
-  overflow: hidden;
+  /* overflow: hidden; */
   position: fixed;
   width: 100%;
 }
@@ -138,7 +138,7 @@ p {
 #showcase .showcase-content {
   color: #fff;
   text-align: center;
-  padding-top: 170px;
+  padding-top: 120px;
 }
 
 #showcase .showcase-content h1 {
@@ -153,7 +153,7 @@ p {
 
 /* Home Info */
 #home-info {
-  height: 400px;
+  height: 500px;
 }
 
 #home-info .info-img {
@@ -168,12 +168,12 @@ p {
   width: 50%;
   height: 100%;
   text-align: center;
-  padding: 50px 30px;
+  padding: 120px 30px;
   overflow: hidden;
 }
 
 #home-info .info-content p {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 /* Features */
