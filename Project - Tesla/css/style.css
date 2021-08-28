@@ -1,0 +1,91 @@
+@font-face {
+    font-family: myGothamFont;
+    src: url(../font/1746-font.woff);
+}
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    font-family: myGothamFont;
+}
+.main-canvas {
+    background: url('../img/M3-Hero-LHD-US-D.jfif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.main-canvas-2 {
+    background: url('../img/model_3_safety_hero.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+header {
+    width: 100vw;
+    height: 54px;
+    position: fixed;
+}
+a {
+    text-decoration: none;
+    color: #FEFEFE;
+}
+ol {
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+.tesla-logo-div {
+    float: left;
+    /* height: 2vh; */
+    height: 100%;
+    /* width: 10vw; */
+    width: 150px;
+    padding-left: 20px;
+    margin: 10px 15px;
+}
+.side-menu-div {
+    position: absolute;
+    top:0;
+    right:0;
+    width: 311px;
+    padding-right: 20px;
+    margin: 10px auto;
+}
+.side-menu-div ol li {
+    padding: 10px 10px;
+    margin: 10px 10px;
+    display: inline;
+    text-align: center;  
+}
+.side-menu-div a:hover {
+    border-radius: 2px;
+    background: #656971;
+}
+.car-selection-div {
+    margin: 1px auto;
+    align-content: center;
+    width: 50vw;
+    height: 100%;
+}
+.car-selection-div ol {
+    padding-top: 10px;
+}
+.car-selection-div ol li {
+    padding: 10px 10px;
+    margin: 10px 10px;
+    display: inline;
+    text-align: center;
+}
+.car-selection-div a:hover {
+    border-radius: 2px;
+    background: #656971;
+}
+header a {
+    /* color: white; */
+}
+header .clr {
+    clear: both;
+}
