@@ -1,0 +1,40 @@
+@media(max-width: 576px) {
+    body {
+        background: blue;
+    }
+    #text {
+        font-size: 12px;
+    }
+}
+@media(min-width: 577px) and (max-width: 768px){
+    body {
+        background: red;
+    }
+    #text {
+        font-size: 16px;
+    }
+}
+@media(min-width: 787px) and (max-width: 992px) {
+    body {
+        background: pink;
+    }
+    #text {
+        font-size: 20px;
+    }
+}
+@media(min-width: 993px) and (max-width: 1200px) {
+    body {
+        background: orange;
+    }
+    #text {
+        font-size: 24px;
+    }
+}
+@media(min-width: 1201px) {
+    body {
+        background: green;
+    }
+    #text {
+        font-size: 28px;
+    }
+}
