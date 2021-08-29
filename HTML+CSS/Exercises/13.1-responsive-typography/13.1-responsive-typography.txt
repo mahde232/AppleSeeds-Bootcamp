@@ -1,0 +1,4 @@
+Because the article inside the PDF is missing.
+We're given a new article:
+
+https://css-tricks.com/snippets/css/fluid-typography/

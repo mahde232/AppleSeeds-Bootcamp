@@ -1,0 +1,18 @@
+@media screen and (min-width: 320px) {
+    html {
+        /* 
+        font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+        This is the general formula for having responsive typography, adjust the min-size, max-size, min/max-viewport-width to your liking
+        
+        font-size: calc(16px + (24px - 16px) * ((100vw - 300px) / (1600 - 300px)));
+        This is a more specific formula for fast general use: .; 
+        */
+
+        font-size: calc(14px + (26-14) * ((100vw - 320px) / 1280));
+    }
+}
+@media screen and (min-width: 1281) {
+    html {
+        font-size: 26px;
+    }
+}
