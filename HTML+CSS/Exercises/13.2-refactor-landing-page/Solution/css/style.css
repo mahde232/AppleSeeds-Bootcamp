@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header {
+    height: 100vh;
+    background: grey url('https://i.pinimg.com/originals/4a/94/26/4a94268541d7a0ed95a8be5138e8a288.jpg')
+    no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    padding-top: 7rem;
+}
+header h1 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+header h2 {
+    display: none;
+    color: red;
+}
+.button {
+    display: inline-block;
+    text-decoration: none;
+    background: #C75EF6;
+    color: white;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+footer h2 {
+    margin: 1rem;
+    margin-left: 0;
+}
+@media(max-height: 500px) {
+    header h2 {
+        margin-top: 1rem;
+        display: block;
+    }
+}
+/* special case for iphone 5 and galaxy fold (very small height devices) landscape mode */
+@media (max-height: 400px) {
+    header {
+        padding-top: 2rem;
+    }
+}
