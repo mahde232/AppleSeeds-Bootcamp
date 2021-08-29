@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+header a {
+    text-decoration: none;
+    color:cadetblue;
+    padding: 5px;
+    margin: 5px;
+}
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+}
+.innerContainer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: flex-end;
+    width: 100vw;
+}
+header .mainTitle {
+    padding: 0;
+    margin: 0;
+}
+
+@media(max-width: 550px) {
+    .headerContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
