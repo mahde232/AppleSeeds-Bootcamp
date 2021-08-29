@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* background-color: grey; */
+    height: 100vh;
+    width: 100vw;
+}
+
+.box1 {
+    background: green;
+    width: 100px;
+    height: 100px;
+}
+.box2 {
+    background: blue;
+    width: 100px;
+    height: 100px;
+}
+.box3 {
+    background: red;
+    width: 100px;
+    height: 100px;
+}
