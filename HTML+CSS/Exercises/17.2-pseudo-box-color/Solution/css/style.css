@@ -6,7 +6,6 @@
     width: 200px;
     height: 200px;
     background: purple;
-    position: relative;
 }
 .box::after {
     content: '';
