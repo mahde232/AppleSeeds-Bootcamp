@@ -1,0 +1,54 @@
+.box1 {
+    height: 100px;
+    width: 100px;
+    background: red;
+    position: absolute;
+    top: 300px;
+    left: 1000px;
+}
+.box1::before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 100px;
+    background: purple;
+    /* animation: out;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-direction: alternate; */
+    transition-property: background, right;
+    transition-duration: 1s;
+
+}
+.box1:hover::before {
+    background: green;
+    right: 0px;
+}
+
+/* .box1:hover::before {
+    animation: in;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+@keyframes in {
+    from {
+        background: purple;
+        right: 100px;
+    }
+    to {
+        right: 0px;
+        background: green;
+    }
+}
+@keyframes out {
+    from {
+        background: green;
+        right: 0px;
+    }
+    to {
+        background: purple;
+        right: 100px;
+    }
+} */
