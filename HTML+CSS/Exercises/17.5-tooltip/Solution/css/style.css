@@ -1,0 +1,15 @@
+a {
+    text-decoration: none;
+    position: relative;
+    color: blue;
+}
+a:hover::after {
+    content: attr(data-tooltip);
+    background: yellow;
+    color: black;
+    position: absolute;
+    bottom: 1rem;
+    width: 8vw;
+    border-radius: 10px;
+    text-align: center;
+}
