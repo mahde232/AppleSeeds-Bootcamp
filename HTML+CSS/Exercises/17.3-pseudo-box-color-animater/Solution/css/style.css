@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    background: purple;
+    position: relative;
+}
+.box::after {
+    content: '';
+    width: 100px;
+    height: 200px;
+    background: orange;
+    position: absolute;
+    left: 100px;
+}
+.box:hover::after {
+    background: blue;
+}
+/* .box::after:hover {
+    background: red;
+} */
