@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.grid {
+    height: 90vh;
+    width: 99vw;
+    display: grid;
+    gap: 2px;
+    grid-template-areas: 
+    'picture1 picture1 picture2 picture2 picture2 picture3 picture4 picture4'
+    'picture1 picture1 picture2 picture2 picture2 picture3 picture4 picture4'
+    'picture5 picture5 picture2 picture2 picture2 picture8 picture8 picture9'
+    'picture5 picture5 picture6 picture6 picture7 picture8 picture8 picture9'
+    'picture5 picture5 picture6 picture6 picture13 picture13 picture13 picture9'
+    'picture10 picture11 picture11 picture12 picture13 picture13 picture13 picture14'
+    'picture10 picture11 picture11 picture12 picture13 picture13 picture13 picture14'
+    ;
+}
+.box img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.box {
+    width: 100%;
+    height: 100%;
+}
+.box img:hover{
+    transform: scale(1.1);
+}
+.picture1 {
+    grid-area: picture1;
+}
+.picture2 {
+    grid-area: picture2;
+}
+.picture3 {
+    grid-area: picture3;
+}
+.picture4 {
+    grid-area: picture4;
+}
+.picture5 {
+    grid-area: picture5;
+}
+.picture6 {
+    grid-area: picture6;
+}
+.picture7 {
+    grid-area: picture7;
+}
+.picture8 {
+    grid-area: picture8;
+}
+.picture9 {
+    grid-area: picture9;
+}
+.picture10 {
+    grid-area: picture10;
+}
+.picture11 {
+
+    grid-area: picture11;
+}
+.picture12 {
+    grid-area: picture12;
+}
+.picture13 {
+    grid-area: picture13;
+}
+.picture14 {
+    grid-area: picture14;
+}
+
+@media(max-width:700px)
+{
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
