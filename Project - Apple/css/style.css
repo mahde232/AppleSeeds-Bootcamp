@@ -39,6 +39,20 @@ body {
     color: var(--apple-navlink-grey);
     font-size: 14px;
 }
+.navLink {
+    color: var(--apple-navLink-grey);
+    padding: 0px 10px;
+    margin: 0px 21px;
+}
+.appleIcon {
+    padding: 0px 30px;
+}
+.searchIcon {
+    padding: 0px 30px;
+}
+.shoppingIcon {
+    margin-left: 30px;
+}
 .pageContainer {
     display: grid;
     grid-template-areas: 
@@ -47,11 +61,6 @@ body {
     'appleTV'
     ;
     row-gap: 12px;
-}
-.navLink {
-    color: var(--apple-navLink-grey);
-    padding: 0px 10px;
-    margin: 0px 21px;
 }
 .shoppingIcon {
     padding: 0px 10px;
@@ -117,16 +126,31 @@ body {
     grid-area: appleTV;
     overflow: hidden;
     height: 100vh;
-    align-items: unset;
+    align-items: center;
+    position: relative;
 }
-.video-container {
-    
+#ATVicon {
+    margin-top: 50vh;
+    width: 108px;
+    height: 43px;
+}
+#seeLogo {
+    margin-top: 21px;
+    width: 346px;
+    height: 174px;
 }
 #appleTVvideo {
-    /* position: relative; */
+    position: absolute;
+    transform: scale(2);
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1;
+}
+#streamBtn {
+    margin-top: 20px;
+    color: black;
+    font-size: 21px;
 }
 .grid-section {
     display: grid;
