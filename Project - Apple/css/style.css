@@ -1,0 +1,213 @@
+/* Vars */
+:root {
+    --apple-navBar-grey-bg: #333333;
+    --apple-grey-text: #F2F2F2;
+    --apple-white-page-bg: #FBFBFD;
+    --apple-grey-title-text: #4B4B4E;
+    --apple-blue-link-text: #2790F4;
+    --apple-announcement-link:#3886D5;
+    --apple-banner-link: #06c;
+    --apple-announcement-bg: #F5F5F7;
+    --apple-announcement-grey-text: #1d1d1f;
+    --apple-navlink-grey: #f5f5f7;
+    --apple-pricing-font: #86868b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: SF-Pro-Text;
+    src: url(../fonts/sf-pro-text_regular.woff2);
+}
+@font-face {
+    font-family: SF-Pro-Display;
+    src: url(../fonts/sf-pro-display_regular.woff);
+}
+body {
+    font-family: SF-Pro-Text, sans-serif;
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    background: var(--apple-navBar-grey-bg);
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    color: var(--apple-navlink-grey);
+    font-size: 14px;
+}
+.pageContainer {
+    display: grid;
+    grid-template-areas: 
+    'iphone12'
+    'iphone12Pro'
+    'appleTV'
+    ;
+    row-gap: 12px;
+}
+.navLink {
+    color: var(--apple-navLink-grey);
+    padding: 0px 10px;
+    margin: 0px 21px;
+}
+.shoppingIcon {
+    padding: 0px 10px;
+    padding-top: 5px;
+}
+.announcement {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    background: var(--apple-announcement-bg);
+    color: var(--apple-announcement-grey-text);
+    padding: 12px 0px;
+}
+.announcementLink {
+    color: var(--apple-announcement-link);
+}
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.iphone12Banner {
+    grid-area: iphone12;
+    color: var(--apple-announcement-grey-text);
+    background-color: var(--apple-white-page-bg);
+    background: url(../img/iphone12bg.jpg) no-repeat center center/cover;
+    height: 70vh;
+    margin-bottom: 12px;
+}
+.iphone12ProBanner {
+    grid-area: iphone12Pro;
+    color: var(--apple-announcement-bg);
+    background-color: var(--apple-white-page-bg);
+    background: url(../img/iphone12probg.jpg) no-repeat center center/cover;
+    height: 70vh;
+    margin-bottom: 12px;
+}
+.pricingDiv {
+    margin-top: 13.6px;
+    color: var(--apple-pricing-font);
+    font-size: 17px;
+}
+.bannerLinksDiv {
+    margin-top: 13.65px;
+    color: var(--apple-banner-link);
+    font-size: 21px;
+}
+.bannerLinksDiv a {
+    display: inline;
+}
+.banner1H2, .banner2H2 {
+    margin-top: 55px;
+    font-size: 56px;
+    font-weight: 600;
+}
+.banner1H3, .banner2H3 {
+    margin-top: 6px;
+    font-size: 28px;
+    font-weight: 400;
+}
+.appleTVBanner {
+    grid-area: appleTV;
+    overflow: hidden;
+    height: 100vh;
+    align-items: unset;
+}
+.video-container {
+    
+}
+#appleTVvideo {
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-section {
+    display: grid;
+    grid-template-areas: 
+    'ipadpro applewatch'
+    'applefitness airpods'
+    'appstore racism'
+    ;
+    row-gap: 12px;
+    column-gap: 12px;
+    margin: 12px 12px;
+}
+.gridDiv{
+    height: 60vh;
+    text-align: center;
+}
+.gridDiv h4{
+    margin-top: 58px;
+    font-size: 40px;
+    line-height: 1.1;
+}
+.gridDiv h5 {
+    margin-top: 5px;
+    font-size: 21px;
+}
+#ipadpro {
+    grid-area: ipadpro;
+    background: url(../img/ipadbg.jpg) no-repeat center center/cover;
+    color: var(--apple-announcement-bg);
+}
+#applewatch {
+    grid-area: applewatch;
+    background: url(../img/applewatch.jpg) no-repeat center center/cover;
+    color: var(--apple-announcement-bg);
+}
+#applefitness {
+    grid-area: applefitness;
+    color: black;
+    background-image: url(../img/fitness.jpg);
+    background-size: 120%;
+    background-position-y: 100%;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    background-color: #FBFBFD;
+}
+#applefitness h5{
+    font-size: 17px;
+    color: var(--apple-announcement-grey-text);
+}
+#airpods {
+    grid-area: airpods;
+    background: url(../img/airpods.jpg) no-repeat center center/cover;
+    color: black;
+}
+#airpods h4 {
+    max-width: 500px;
+}
+#appstore {
+    grid-area: appstore;
+    background: url(../img/marvel.jpg) no-repeat center center/cover;
+    color: black;
+}
+#appstore h5 {
+    color: var(--apple-announcement-grey-text);
+    font-size: 17px;
+}
+#racism {
+    grid-area: racism;
+    background: url(../img/racism.jpg) no-repeat center center/cover;
+    color: var(--apple-announcement-bg);
+}
+#racism h4:nth-child(2) {
+    margin-top: 0px;
+}
+#racism a {
+    color: white;
+}
+
+
+/* Utilities */
+
+.link {
+    text-decoration: none;
+}
