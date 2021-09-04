@@ -54,22 +54,24 @@ a {
     text-align: left;
 }
 .abilityRating {
-    color: #434242;
     text-align: right;
+}
+.abilityRating i {
+    color: #22A39F;
 }
 
 /* Landing Page */
 
 #top {
-    background: url(../img/background2.jpg) no-repeat center right fixed;
+    background: url(../img/background.jpg) no-repeat center right fixed;
     background-size: cover;
-    opacity: 0.9;
 }
 .container {
     position: relative;
     max-width: 100%;
     height: 100vh;
-    padding: 300px 180px;
+    padding: 0px 180px;
+    padding-top: 360px;
     text-align: center;
     margin: 0px auto;
 }
@@ -111,7 +113,7 @@ a {
     animation-direction: normal;
 }
 .scrollDown .chevron:hover {
-    color: #B12E98;
+    color: #22A39F;
 }
 @keyframes wiggle {
     0% {
@@ -124,9 +126,20 @@ a {
         padding-top: 20px;
     }
 }
-.navbarList {
+.navbar {
     position: absolute;
+    top: 100vh;
     right: 5%;
+    z-index: 999;
+    overflow: auto;
+}
+.sticky {
+    position: sticky;
+    top: 100px;
+    z-index: 999;
+    float: right;
+}
+.navbarList {
     list-style: none;
     text-align: center;
 }
@@ -142,12 +155,11 @@ a {
     font-weight: 600;
 }
 .navbarList li a:hover{
-    color: #555;
+    color: #22A39F;
 }
 
 
 /* Profile */
-
 
 .profileContainer {
     background: #fff;
@@ -302,6 +314,9 @@ a {
     display: inline-block;
     width: 49%;
 }
+.abilitiesContainer ul li:hover {
+    background: lightgrey;
+}
 #languagesGrid {
     display: grid;
     grid-template-areas: 
@@ -369,6 +384,7 @@ a {
     background: #22A39F;
     padding: 150px;
     z-index: 1;
+    transition: all 0.2s ease-in-out;
 }
 .projectText .projectName {
     font: 22px;
@@ -390,4 +406,46 @@ a {
 .linkIcon > i {
     padding: 12px 12px;
     color: #fff;
+}
+
+
+/* Contact */
+
+.contactContainer {
+    background-color: #434242;
+    padding: 60px 500px;
+    height: 70vh;
+}
+.contactContainer .title {
+    color: #fff;
+}
+.contactContainer .leadingP {
+    color: #fff;
+}
+#socialsGrid {
+    display: grid;
+    grid-template-areas: 
+    'linkedin github'
+    'twitter email'
+    ;
+    margin: 60px 0px;
+    row-gap: 50px;
+}
+#socialsGrid a {
+    font-size: 22px;
+    font-weight: 100;
+    padding: 10px 10px;
+    color: #fff;
+}
+#twitter {
+    grid-area: twitter;
+}
+#linkedin {
+    grid-area: linkedin;
+}
+#github {
+    grid-area: github;
+}
+#email {
+    grid-area: email;
 }

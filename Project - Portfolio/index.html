@@ -17,8 +17,6 @@
             <hr>
             <p>Interactive Resume + Portfolio</p>
         </div>
-        <div class="overlay">
-        </div>
         <a href="#profile" class="scrollDown">
             <i class="fas fa-chevron-down chevron"></i>
         </a>
@@ -27,14 +25,22 @@
     <nav class="navbar">
         <ul class="navbarList">
             <li><a href="#profile">Profile</a></li>
-            <li><a href="#">Experiences</a></li>
-            <li><a href="#">Abilities</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#experience">Experiences</a></li>
+            <li><a href="#abilities">Abilities</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <!-- Profile -->
     <section class="profileContainer">
+
+        <script type="text/javascript">
+        window.addEventListener("scroll",function(){
+            var header = document.querySelector("nav");
+            header.classList.toggle("sticky",window.scrollY > 800);
+        })
+        </script>
+
         <div id="profile">
             <h2 class="title">Profile</h2>
             <p class="leadingP">
@@ -71,7 +77,7 @@
         </div>
     </section>
     <!-- Experience -->
-    <section class="experienceContainer">
+    <section id="experience" class="experienceContainer">
         <h2 class="title">Experiences</h2>
         <p class="leadingP">
             “Protons give an atom its identity, electrons its personality.”
@@ -141,7 +147,7 @@
         </div>
     </section>
     <!-- Abilities -->
-    <section class="abilitiesContainer">
+    <section id="abilities" class="abilitiesContainer">
         <h2 class="title">Abilities</h2>
         <p class="leadingP">
             “Life without knowledge is death in disguise.”
@@ -155,27 +161,63 @@
                 <ul>
                     <li>
                         <span class="abilityTitle">CSS(3)</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="abilityTitle">HTML(5)</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="abilityTitle">Object-Oriented Programming</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
                     </li>
                     <li>
                         <span class="abilityTitle">CSS(3)</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
                     </li>
                     <li>
                         <span class="abilityTitle">CSS(3)</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
                     </li>
                     <li>
                         <span class="abilityTitle">CSS(3)</span>
-                        <span class="abilityRating">Rating</span>
-                    </li>
-                    <li>
-                        <span class="abilityTitle">CSS(3)</span>
-                        <span class="abilityRating">Rating</span>
-                    </li>
-                    <li>
-                        <span class="abilityTitle">CSS(3)</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -183,19 +225,43 @@
                 <ul>
                     <li>
                         <span class="abilityTitle">CSS(3)</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
                     </li>
                     <li>
                         <span class="abilityTitle">CSS(3)</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
                     </li>
                     <li>
                         <span class="abilityTitle">CSS(3)</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityRating">
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </span>
                     </li>
                     <li>
                         <span class="abilityTitle">CSS(3)</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star-half"></i>
+                            <i class="fas fa-star-half"></i>
+                            <i class="fas fa-star-half"></i>
+                            <i class="fas fa-star-half"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -207,23 +273,48 @@
                 <ul>
                     <li>
                         <span class="abilityTitle">English</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
                     </li>
                     <li>
-                        <span class="abilityTitle">Hebrew</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityTitle">Arabic</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
+
                     </li>
                 </ul>
             </div>
             <div class="secondCol">
                 <ul>
                     <li>
-                        <span class="abilityTitle">Arabic</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityTitle">Hebrew</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
                     </li>
                     <li>
-                        <span class="abilityTitle">Placeholder</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityTitle">Italian</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -234,47 +325,95 @@
             <div class="firstCol">
                 <ul>
                     <li>
-                        <span class="abilityTitle">Tool 1</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityTitle">VS Code</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
                     </li>
                     <li>
-                        <span class="abilityTitle">English</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityTitle">Windows</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
                     </li>
                     <li>
-                        <span class="abilityTitle">English</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityTitle">MS Office</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
                     </li>
                     <li>
-                        <span class="abilityTitle">English</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityTitle">Notepad++</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
                     </li>
                     <li>
-                        <span class="abilityTitle">Hebrew</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityTitle">Git / Github</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
                     </li>
                 </ul>
             </div>
             <div class="secondCol">
                 <ul>
                     <li>
-                        <span class="abilityTitle">Arabic</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityTitle">Google Chrome</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
                     </li>
                     <li>
-                        <span class="abilityTitle">Placeholder</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityTitle">Torrenting</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
                     </li>
                     <li>
-                        <span class="abilityTitle">English</span>
-                        <span class="abilityRating">Rating</span>
+                        <span class="abilityTitle">Mac</span>
+                        <span class="abilityRating">
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </span>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
     <!-- Projects -->
-    <section class="projectsContainer">
+    <section id="projects" class="projectsContainer">
         <h2 class="title">Projects</h2>
         <p class="leadingP">
             “You can do anything you set your mind to.”
@@ -284,7 +423,7 @@
         <hr>
         <div id="projectsGrid">
             <div id="project1" class="project">
-                <img src="https://picsum.photos/400" alt="">
+                <img src="https://source.unsplash.com/random/400x400?sig=1" alt="">
                 <a href="#" class="linkIcon">
                     <i class="fas fa-external-link-alt"></i>
                 </a>
@@ -294,7 +433,7 @@
                 </div>
             </div>
             <div id="project2" class="project">
-                <img src="https://picsum.photos/400" alt="">
+                <img src="https://source.unsplash.com/random/400x400?sig=2" alt="">
                 <a href="#" class="linkIcon">
                     <i class="fas fa-external-link-alt"></i>
                 </a>
@@ -304,7 +443,7 @@
                 </div>
             </div>
             <div id="project3" class="project">
-                <img src="https://picsum.photos/400" alt="">
+                <img src="https://source.unsplash.com/random/400x400?sig=3" alt="">
                 <a href="#" class="linkIcon">
                     <i class="fas fa-external-link-alt"></i>
                 </a>
@@ -314,7 +453,7 @@
                 </div>
             </div>
             <div id="project4" class="project">
-                <img src="https://picsum.photos/400" alt="">
+                <img src="https://source.unsplash.com/random/400x400?sig=4" alt="">
                 <a href="#" class="linkIcon">
                     <i class="fas fa-external-link-alt"></i>
                 </a>
@@ -326,8 +465,37 @@
         </div>
     </section>
     <!-- Contact -->
-    <section class="contactContainer">
-
+    <section id="contact" class="contactContainer">
+        <h2 class="title">Contact</h2>
+        <p class="leadingP">
+            “All our dreams can come true, if we have the courage to pursue them.”
+            <br>
+            - Walt Disney
+        </p>
+        <hr>
+        <div id="socialsGrid">
+            <div id="twitter">
+                <a href="https://www.twitter.com/mahde232" target="_blank">
+                    <i class="fab fa-twitter-square icon-4x"></i> www.twitter.com/mahde232
+                </a>
+            </div>
+            <div id="linkedin">
+                <a href="https://www.linkedin.com/in/mahde-halabi-69a319149/" target="_blank">
+                    <i class="fab fa-linkedin icon-4x"></i> www.linkedin.com/in/mahde-halabi
+                </a>
+            </div>
+            <div id="email">
+                <a href="mailto:mahde_halabi@yahoo.com">
+                    <i class="fas fa-at icon-4x"></i> mahde_halabi@yahoo.com
+                </a>
+            </div>
+            <div id="github">
+                <a href="https://github.com/mahde232" target="_blank">
+                    <i class="fab fa-github-square icon-4x"></i> https://github.com/mahde232
+                </a>
+            </div>
+        </div>
+        <hr>
     </section>
 </body>
 </html>
