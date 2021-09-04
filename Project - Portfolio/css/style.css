@@ -8,22 +8,386 @@ body {
     /* font-family: Lato, Roboto, sans-serif; */
     font-family: sans-serif;
 }
+
+
+/* Utilities*/
+
+.title {
+    font-size: 54px;
+    text-align: center;
+    font-weight: 500;
+    color: #22A39F;
+    margin-bottom: 20px;
+}
+.leadingP {
+    text-align: center;
+    color: #434242;
+    margin-bottom: 15px;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.4;
+}
+.expGrids {
+    display: grid;
+    column-gap: 150px;
+    row-gap: 20px;
+    max-width: 1280px;
+    margin: 0px auto;
+    margin-bottom: 15px;
+}
+.gridH4 {
+    font-size: 20px;
+    margin: 10px 0px;
+}
+.gridP {
+    color: #434242;
+}
+.gridP > strong {
+    display: block;
+    margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+}
+.abilityTitle {
+    color: #434242;
+    text-align: left;
+}
+.abilityRating {
+    color: #434242;
+    text-align: right;
+}
+
+/* Landing Page */
+
+#top {
+    background: url(../img/background2.jpg) no-repeat center right fixed;
+    background-size: cover;
+    opacity: 0.9;
+}
 .container {
     position: relative;
     max-width: 100%;
-    padding: 40px 180px;
+    height: 100vh;
+    padding: 300px 180px;
     text-align: center;
     margin: 0px auto;
 }
 .container > h1 {
     font-size: 63px;
     padding-bottom: 20px;
-    border-bottom: 1px rgb(114, 112, 112) solid;
-    /* color: #FFF; */
+    color: #FFF;
 }
 .container > p {
     font-size: 28px;
-    margin-bottom: 15px;
+    margin: 15px auto;
     font-weight: 200;
-    /* color: #fff; */
+    color: #fff;
+}
+.scrollDown {
+    position: absolute;
+    bottom: 0px;
+    right: 5%;
+    text-align: center;
+    display: block;
+    background: #222222;
+    color: #fff;
+}
+.scrollDown:focus-visible {
+    background: #2a6496;
+    text-decoration: underline;
+}
+.scrollDown .chevron {
+    height: 80px;
+    width: 110px;
+    color: #fff;
+    font-size: 30px;
+    padding-top: 30px;
+    display: inline-block;
+    animation-name: wiggle;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+.scrollDown .chevron:hover {
+    color: #B12E98;
+}
+@keyframes wiggle {
+    0% {
+        padding-top: 20px;
+    }
+    50% {
+        padding-top: 28px;
+    }
+    100% {
+        padding-top: 20px;
+    }
+}
+.navbarList {
+    position: absolute;
+    right: 5%;
+    list-style: none;
+    text-align: center;
+}
+.navbarList li {
+    background: #222222;
+}
+.navbarList li a {
+    padding-top: 30px;
+    height: 80px;
+    width: 110px;
+    display: block;
+    color: #fff;
+    font-weight: 600;
+}
+.navbarList li a:hover{
+    color: #555;
+}
+
+
+/* Profile */
+
+
+.profileContainer {
+    background: #fff;
+}
+#profile {
+    max-width: 1280px;
+    padding: 60px 180px;
+    margin: 0px auto;
+    height: 60vh;
+}
+.gridContainer {
+    margin-top: 15px;
+    display: grid;
+    grid-template-areas: 
+    'aboutMe picture personalInfo'
+    'aboutMe picture personalInfo'
+    'aboutMe picture personalInfo';
+}
+#aboutMe {
+    grid-area: aboutMe;
+}
+#aboutMe h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #22A39F;
+}
+#aboutMe p {
+    width: 300px;
+    line-height: 1.4;
+    color: #434242;
+}
+#picture {
+    grid-area: picture;
+}
+#picture img {
+    height: 200px;
+    border-radius: 100%;
+    border: #22A39F 5px solid;
+}
+#personalInfo {
+    grid-area: personalInfo;
+}
+#personalInfo h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #22A39F;
+}
+#personalInfo h4 {
+    margin-bottom: 5px;
+}
+#personalInfo p {
+    color: #434242;
+    margin-bottom: 10px;
+}
+
+/* Experience */
+
+.experienceContainer {
+    background-color: #F3EFE0;
+    padding: 60px 300px;
+}
+.experienceContainer h3 {
+    color: #22A39F;
+    font-size: 28px;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#education {
+    grid-template-areas: 
+    'HS HSinfo HSinfo'
+    'college collegeinfo collegeinfo'
+    'bootcamp BCinfo BCinfo'
+    ;
+}
+#highschool {
+    grid-area: HS;
+}
+#HSinfo {
+    grid-area: HSinfo;
+}
+#college {
+    grid-area: college;
+}
+#collegeinfo {
+    grid-area: collegeinfo;
+}
+#bootcamp {
+    grid-area: bootcamp;
+}
+#BCinfo {
+    grid-area: BCinfo;
+}
+#careers {
+    grid-template-areas: 
+    'freelance FLinfo FLinfo'
+    'placeholder placeholderinfo placeholderinfo'
+    ;
+}
+#freelance {
+    grid-area: freelance;
+}
+#FLinfo {
+    grid-area: FLinfo;
+}
+#placeholder {
+    grid-area: placeholder;
+}
+#placeholderinfo {
+    grid-area: placeholderinfo;
+}
+/* add more careers here */
+
+/* Abilities */
+.abilitiesContainer {
+    background-color: #fff;
+    padding: 60px 400px;
+}
+.abilitiesContainer h3 {
+    color: #22A39F;
+    font-size: 28px;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#abilitiesGrid {
+    display: grid;
+    grid-template-areas: 
+    'AfirstCol AsecondCol'
+    ;
+    margin-bottom: 15px;
+}
+#abilitiesGrid .firstCol {
+    grid-area: AfirstCol;
+    padding: 0px 10px;
+}
+#abilitiesGrid .secondCol {
+    grid-area: AsecondCol;
+    padding: 0px 10px;
+}
+.abilitiesContainer ul {
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.abilitiesContainer ul li {
+    padding: 5px 0px;
+    margin: 5px 0px;
+}
+.abilitiesContainer ul li span {
+    color: #434242;
+    display: inline-block;
+    width: 49%;
+}
+#languagesGrid {
+    display: grid;
+    grid-template-areas: 
+    'LfirstCol LsecondCol'
+    ;
+    margin-bottom: 15px;
+}
+#languagesGrid .firstCol {
+    grid-area: LfirstCol;
+    padding: 0px 10px;
+}
+#languagesGrid .secondCol {
+    grid-area: LsecondCol;
+    padding: 0px 10px;
+}
+#toolsGrid {
+    display: grid;
+    grid-template-areas: 
+    'TfirstCol TsecondCol'
+    ;
+    margin-bottom: 15px;
+}
+#toolsGrid .firstCol {
+    grid-area: TfirstCol;
+    padding: 0px 10px;
+}
+#toolsGrid .secondCol {
+    grid-area: TsecondCol;
+    padding: 0px 10px;
+}
+
+/* Projects */
+.projectsContainer {
+    background-color: #F3EFE0;
+    padding: 60px 500px;
+}
+#projectsGrid {
+    display: grid;
+    grid-template-areas: 
+    'project1 project2'
+    'project3 project4'
+    ;
+    margin-top: 30px;
+    gap: 20px;
+}
+.project {
+    position: relative;
+}
+.linkIcon {
+    position: absolute;
+    top: 0;
+    right: 42px;
+    height: 40px;
+    width: 40px;
+    background-color: #22A39F;
+    z-index: 2;
+}
+.projectText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+    background: #22A39F;
+    padding: 150px;
+    z-index: 1;
+}
+.projectText .projectName {
+    font: 22px;
+    color: red;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+.projectText .projectDesc {
+    font: 18px;
+    color: red;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+.project:hover > .projectText{
+    opacity: 0.8;
+}
+.linkIcon > i {
+    padding: 12px 12px;
+    color: #fff;
 }
