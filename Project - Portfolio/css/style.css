@@ -57,7 +57,7 @@ a {
     text-align: right;
 }
 .abilityRating i {
-    color: #22A39F;
+    transition: all 0.2s linear;
 }
 
 /* Landing Page */
@@ -285,21 +285,6 @@ a {
     margin-top: 30px;
     margin-bottom: 20px;
 }
-#abilitiesGrid {
-    display: grid;
-    grid-template-areas: 
-    'AfirstCol AsecondCol'
-    ;
-    margin-bottom: 15px;
-}
-#abilitiesGrid .firstCol {
-    grid-area: AfirstCol;
-    padding: 0px 10px;
-}
-#abilitiesGrid .secondCol {
-    grid-area: AsecondCol;
-    padding: 0px 10px;
-}
 .abilitiesContainer ul {
     list-style: none;
     justify-content: center;
@@ -309,13 +294,28 @@ a {
     padding: 5px 0px;
     margin: 5px 0px;
 }
-.abilitiesContainer ul li span {
-    color: #434242;
+.abilitiesContainer ul li .abilityTitle {
     display: inline-block;
-    width: 49%;
+    width: 420px;
 }
 .abilitiesContainer ul li:hover {
     background: lightgrey;
+}
+.abilitiesContainer ul li:hover > .abilityRating i {
+    color: #22A39F;
+}
+#abilitiesGrid {
+    display: grid;
+    grid-template-areas: 
+    'AfirstCol AsecondCol'
+    ;
+    margin-bottom: 15px;
+}
+#abilitiesGrid .firstCol {
+    grid-area: AfirstCol;
+}
+#abilitiesGrid .secondCol {
+    grid-area: AsecondCol;
 }
 #languagesGrid {
     display: grid;
@@ -326,13 +326,11 @@ a {
 }
 #languagesGrid .firstCol {
     grid-area: LfirstCol;
-    padding: 0px 10px;
 }
 #languagesGrid .secondCol {
     grid-area: LsecondCol;
-    padding: 0px 10px;
 }
-#toolsGrid {
+/* #toolsGrid {
     display: grid;
     grid-template-areas: 
     'TfirstCol TsecondCol'
@@ -346,7 +344,7 @@ a {
 #toolsGrid .secondCol {
     grid-area: TsecondCol;
     padding: 0px 10px;
-}
+} */
 
 /* Projects */
 .projectsContainer {
