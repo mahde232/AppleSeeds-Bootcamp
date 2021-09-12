@@ -47,12 +47,14 @@ b) string <- correct answer
 //------Submit your answers under the question------//
 
 //create three different ways to declare variables
-let x;
+var x;
 x = 10;
 
-let y = 10;
+const y = 10;
 
 let z = x + y;
+
+
 //declare a variable and reassign a value to it
 let foo = 10;
 foo = 20;
@@ -70,7 +72,7 @@ let bill = 1200;
 let tax = 0.1;
 
 let payment = bill + bill*tax;
-console.log(payment);
+console.log(`bill is ${bill}, tax is ${tax}, amount to pay in total is: ${payment}`);
 // Round the number 50.6 to its nearest integer
 let dec = 50.6;
 console.log(Math.round(dec));
