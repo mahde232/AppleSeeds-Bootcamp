@@ -698,3 +698,114 @@ hr {
     background: #EFF1F3;
     border: 1px solid #A2A6AC;
 }
+.freqBoughtContainer {
+    display: flex;
+    margin-left: 220px;
+}
+.freqBoughtContainer a {
+    color: #007185;
+}
+.freqBoughtContainer hr {
+    margin-bottom: 10px;
+}
+.freqBoughtContainer hr + div {
+    font-family: Verdana;
+    color: #cc6600;
+    line-height: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.freqBoughtContainer .left {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+.left .pictures {
+    display: flex;
+    align-items: center;
+}
+.left .pictures div{
+    display: inline-block;
+}
+.left .pictures .plus {
+    font-size: 24px;
+    color: #565959;
+    margin: 0px 10px;
+}
+.pictures .pic1 {
+    background: url(../img/pic1.jpg) no-repeat center center/cover;
+    height: 116px;
+    width: 116px;
+}
+.pictures .pic2 {
+    background: url(../img/pic2.jpg) no-repeat center center/cover;
+    height: 116px;
+    width: 116px;
+}
+.pictures .pic3 {
+    background: url(../img/pic3.jpg) no-repeat center center/cover;
+    height: 116px;
+    width: 116px;
+}
+.totalPrice {
+    margin-top: -100px;
+    margin-left: 20px;
+    color: #565959;
+}
+.totalPrice .firstRow {
+    font-size: 14px;
+}
+.totalPrice .addAll {
+    display: block;
+    background: #FFD814;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 4px 6px;
+    margin-top: 4px;
+}
+.left .checkboxes {
+    margin-left: 6px;
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+.checkboxes div {
+    margin-bottom: 4px;
+}
+.checkboxes input {
+    margin-right: 4px;
+}
+.freqBoughtContainer .right {
+    margin-left: 30px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right .new {
+    color: #0F1111;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #999999;
+    padding: 10px 0;
+    padding-left: 20px;
+    padding-right: 80px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.right .share {
+    font-size: 13px;
+}
+.right .share i {
+    font-size: 20px;
+}
+.right .share + span {
+    margin-top: 10px;
+    font-size: 12px;
+}
+.right .sellOnAmazon {
+    color: #0F1111;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #999999;
+    padding: 4px 10px;
+}
