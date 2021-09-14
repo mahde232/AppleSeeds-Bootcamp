@@ -11,7 +11,10 @@ function avgJumper(arr) {
                 cnt++;
             }
         }
-        avgOfEach.push(sum/cnt); //calculate jumper avg and push it to array
+        if(cnt <= 0) //no valid jumps
+            avgOfEach.push(sum/cnt); //calculate jumper avg and push it to array
+        else
+            avgOfEach.push('no avg');
     }
     return avgOfEach;
 }
