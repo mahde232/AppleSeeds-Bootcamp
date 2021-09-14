@@ -1,4 +1,4 @@
-Book = {
+const Book = {
     Title: "Death Note",
     Writer: "Nisio Isin",
     ReleaseDate: "2006",
