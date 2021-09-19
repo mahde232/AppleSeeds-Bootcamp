@@ -1,0 +1,22 @@
+const foods = ["falafel", "sabich", "hummus", "pizza with extra pineapple"];
+const foodsWithUpperCase = ["falafel", "Sabich", "hummus", "pizza with extra pineapple"];
+const words = ["apple", "supercalifragilisticexpialidocious","hi", "zoo"];
+
+console.log(foods);
+foods.sort();
+//foods.sort((a,b) => a.localeCompare(b));
+console.log(foods);
+foods.sort((a,b) => b.localeCompare(a));
+console.log(foods);
+console.log();
+console.log(foodsWithUpperCase);
+foodsWithUpperCase.sort();
+console.log(foodsWithUpperCase);
+foodsWithUpperCase.sort((a,b) => b.localeCompare(a));
+console.log(foodsWithUpperCase);
+console.log();
+console.log(words);
+words.sort((a,b) => a.length - b.length);
+console.log(words);
+words.sort((a,b) => b.length - a.length);
+console.log(words);
