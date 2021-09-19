@@ -13,7 +13,12 @@ function potatoMan() {
     console.log("I am the potato man!");
 }
 function firstWordUpperCase(str, func) {
-    str = str[0].toUpperCase() + str.slice(1);
+    str = str.split(" ");
+    let temp = "";
+    for(let i = 0; i < str[0].length; i++)
+        temp += str[0][i].toUpperCase();
+    str[0]=temp;
+    str = str.join(' ');
     func(str);
 }
 let test = 'hello world i am mas3ood';
