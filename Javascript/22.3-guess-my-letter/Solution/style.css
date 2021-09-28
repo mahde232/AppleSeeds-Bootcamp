@@ -1,0 +1,13 @@
+#pageContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+#guess {
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 24px;
+}
