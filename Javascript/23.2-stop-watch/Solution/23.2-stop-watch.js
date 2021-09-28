@@ -31,7 +31,6 @@ let isPressed=false;
 startBtn.addEventListener('click', () => {
     if(!isPressed)
     {
-        console.log('+');
         timerStop =setInterval(timer,10)
         isPressed=true;
     }
