@@ -19,4 +19,4 @@ setInterval(() => {
         seconds.innerText = `0${calcseconds}`;
     else
         seconds.innerText = `${calcseconds}`;
-}, 500);
+}, 200);
