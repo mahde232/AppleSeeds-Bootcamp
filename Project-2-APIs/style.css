@@ -31,11 +31,11 @@
 #questionsContainer {
     position: absolute;
     z-index: -1;
-    background-color: red;
+    background-color: hotpink;
     display: flex;
     flex-direction: column;
     text-align: center;
-    min-width: 60vw;
+    min-width: 30vw;
     /* height: 40vh; */
     align-items: center;
     justify-content: center;
