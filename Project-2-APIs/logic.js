@@ -5,13 +5,12 @@ let possibleAnswers, currentQuestion, currentQuestionID = 0, choseAnswer = false
 
 //functions
 async function grabQuestions() {
-    TFQuestions = await grabQuestionsByParams(15, 10, `boolean`);
-    MTQuestions = await grabQuestionsByParams(15, 10, `multiple`);
+    TFQuestions = await grabQuestionsByParams(15, amountOfQuestions/2, `boolean`);
+    MTQuestions = await grabQuestionsByParams(15, amountOfQuestions/2, `multiple`);
     let combinedArr = [...TFQuestions, ...MTQuestions];
     combinedArr = shuffle(combinedArr); //shuffle questions
     return combinedArr;
 }
-
 async function grabQuestionsByParams(category, amount, type) {
     const apiURL = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=easy&type=${type}`
     let data;
@@ -21,7 +20,6 @@ async function grabQuestionsByParams(category, amount, type) {
     catch (err) { console.log(`Error occured: ${err}`); }
     return data.results;
 }
-
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;
     // While there remain elements to shuffle...
@@ -34,7 +32,6 @@ function shuffle(array) {
     }
     return array;
 }
-
 async function addImage(){
     //CHANGE TO 1 LET
     let urlToUse = '', str = '', rollDice = Math.round(Math.random());
@@ -100,7 +97,7 @@ function possibleAnswerClick(event) {
 async function nextQuestion() {
     ++currentQuestionID;
     choseAnswer=false;
-    if(currentQuestionID < amountOfQuestions) //didn't finish exam.
+    if(currentQuestionID < amountOfQuestions) //didn't finish quiz.
     {
         currentQuestion = questionsList[currentQuestionID];
         let htmlToInsert = await buildQuestionHTML(questionsList[currentQuestionID], currentQuestionID);
@@ -111,7 +108,7 @@ async function nextQuestion() {
         });
         document.querySelector('#skipBtn').addEventListener('click', nextQuestion)
     }
-    else
+    else //finished quiz
     {
         document.querySelector('#scoreboard').style.visibility = 'hidden';
         questionsContainer.innerHTML= `CONGRATULATIONS! You finished with score of ${score}! <br> <img src="./img/giphy.gif">`
