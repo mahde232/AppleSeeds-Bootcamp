@@ -1,3 +1,8 @@
+//TODO:
+//Add ability for user to choose the amount of questions in quiz
+//(underlying code is ready, just change variable amountOfQuestions)
+//need to add visual html elements to ask the user for the amount of questions.
+
 //Query selectors
 const containerDiv = document.querySelector('#questionsContainer');
 const questionsContainer = document.querySelector('#questionDiv');
