@@ -74,10 +74,10 @@ function createTableRow(person){
 
 function createTable(res) {
     let tableObj = document.createElement('table');
-
     tableObj.style.textAlign = 'center';
     tableObj.style.borderCollapse = 'collapse';
     tableObj.style.borderSpacing = '0';
+
     let caption = tableObj.createCaption();
     caption.textContent = 'Star Wars';
     caption.style.backgroundColor = 'navy';
