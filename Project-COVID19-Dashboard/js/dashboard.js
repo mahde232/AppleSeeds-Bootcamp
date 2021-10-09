@@ -109,7 +109,6 @@ function createCountriesDropdown(chosenContinent) {
         str += `<option value="${country}">${country}</option>`
     });
     str+= `</select>`;
-    str+= `<button id='countryBtn'>Country Data Please</button>`
     return str;
 }
 //useful small functions
@@ -144,7 +143,7 @@ window.onload = async function() {
     //for first startup
     buildChart(document.querySelector("#chart-select").value, document.querySelector("#region-select").value, document.querySelector("#statistic-select").value)
     document.querySelector('#dropdownContainer').innerHTML = createCountriesDropdown(document.querySelector("#region-select").value);
-    document.querySelector('#countryBtn').addEventListener('click',()=> {
+    document.querySelector('#countries-select').addEventListener('change',()=> {
         document.querySelector('#countryDataContainer').innerHTML = createCountryData(document.querySelector('#countries-select').value);
     })
     document.querySelector('#countryDataContainer').innerHTML = createCountryData(document.querySelector('#countries-select').value);
@@ -152,7 +151,7 @@ window.onload = async function() {
 document.querySelector('#grabDataBtn').addEventListener('click', async function () {
     buildChart(document.querySelector("#chart-select").value, document.querySelector("#region-select").value, document.querySelector("#statistic-select").value)
     document.querySelector('#dropdownContainer').innerHTML = createCountriesDropdown(document.querySelector("#region-select").value);
-    document.querySelector('#countryBtn').addEventListener('click',()=> {
+    document.querySelector('#countries-select').addEventListener('change',()=> {
         document.querySelector('#countryDataContainer').innerHTML = createCountryData(document.querySelector('#countries-select').value);
     })
     document.querySelector('#countryDataContainer').innerHTML = createCountryData(document.querySelector('#countries-select').value);

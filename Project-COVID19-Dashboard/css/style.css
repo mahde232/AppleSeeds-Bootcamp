@@ -30,10 +30,9 @@
 /* Upper stuff */
 #upperDashboardContainer {
     height: 60vh;
-    width: 90vw;
+    min-width: 90vw;
     display: flex;
     flex-direction: column;
-    /* background-color: rgb(138, 138, 150); */
     align-items: center;
     justify-content:center;
 }
@@ -41,21 +40,16 @@
     #topBanner {
         text-align: center;
         color: #323232;
-        /* background-color: purple; */
-        /* color: grey; */
     }
     #chartContainer {
         height: 60vh;
         width: 80vw;
-        /* min-height: 30vh;
-        min-width: 40vh; */
         background-color: white;
         padding-bottom: 8vh;
     }
 /* Lower Stuff */
 #lowerDashboardContainer {
-    /* height: 40vh; */
-    width: 80vw;
+    min-width: 80vw;
     display: flex;
     flex-direction: column;
     background-color: #34495e;
@@ -66,8 +60,7 @@
 }
     /* Inner Lower Stuff */
 #countries-select {
-    width: 5vw;
-    /* margin-top: 1vh; */
+    min-width: 7vw;
     margin-bottom: 0.5vh;
 }
 #dropdownContainer {
@@ -75,11 +68,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 #countryDataContainer {
     text-align: center;
 }
 
+@media only screen and (max-width: 600px) {
+    #pageContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    #flexContainer {
+        order: 1;
+    }
+    #controlPanel {
+        order: 2;
+    }
+}
 
 #spinnerContainer {
     position: absolute;
