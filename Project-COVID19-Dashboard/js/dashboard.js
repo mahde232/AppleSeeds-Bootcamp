@@ -1,6 +1,7 @@
 //global parameters
 let covid_api_url = 'https://corona-api.com/countries'
-let countries_api_URL = 'https://cors-anywhere.herokuapp.com/https://restcountries.herokuapp.com/api/v1' //with proxy, fixes cors problem, but needs to request permission to use first
+// let countries_api_URL = 'https://cors-anywhere.herokuapp.com/https://restcountries.herokuapp.com/api/v1' //with proxy, fixes cors problem, but needs to request permission to use first
+let countries_api_URL = 'https://api.allorigins.win/raw?url=https://restcountries.herokuapp.com/api/v1' //working proxy
 // let countries_api_URL = 'https://restcountries.herokuapp.com/api/v1' //without proxy, has cors problem
 let countriesResult, covidDataResult, chartObject, countries = {}, coronaStats = {}, graphColor = `rgb(40,40,40)`, refetchTime = 300; //this is in seconds
 
