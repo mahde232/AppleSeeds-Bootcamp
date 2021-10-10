@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Project - Cards Game</title>
+</head>
+
+<body>
+    <div id="pageContainer">
+        <div id="header">
+            <h2>Welcome to</h2>
+            <h1>Mahde's Memory Card Game</h1>
+        </div>
+        <div id="gameContainer">
+            <div id="cardsFlex">
+                <div>Please Choose Game Settings</div>
+            </div>
+        </div>
+        <div id="gameControls">
+            <select name="theme-select" id="theme-select">
+                <option value='Halloween'>Halloween</option>
+                <option value='Mario'>Mario</option>
+            </select>
+            <select name="difficulty-select" id="difficulty-select">
+                <option value='12'>12</option>
+                <option value='18'>18</option>
+            </select>
+            <button id='startGameBtn'>Start Game</button>
+        </div>
+    </div>
+    <div id='audio'>
+        <audio id='success'>
+            <source src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3' type='audio/mpeg'>
+        </audio>
+        <audio id='fail'>
+            <source src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/error.mp3' type='audio/mpeg'>
+        </audio>
+        <audio id='win'>
+            <source src='./audio/win.wav' type='audio/mpeg'>
+        </audio>
+    </div>
+    <script src="./js/Logic.js"></script>
+</body>
+
+</html>
