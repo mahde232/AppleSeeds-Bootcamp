@@ -54,6 +54,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 @media only screen and (max-width: 900px) {
     .card {
