@@ -1,12 +1,6 @@
 //class declarations
 class Task {
-    // //object fields
-    // id;
-    // title;
-    // description;
-    // createTime;
-    // deadLine;
-    constructor(id, title, description, deadLine, active) {
+    constructor(id, title, description, deadLine, active=true) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -25,9 +19,6 @@ class Task {
     getIsActive() { return this.isActive; }
 }
 class ToDoList {
-    // //object fields
-    // arrayOfTasks;
-    // taskIDs;
     constructor(obj = null) {
         if (obj === null) {
             this.arrayOfTasks = [];
@@ -51,30 +42,32 @@ class ToDoList {
         return newTask; //for debug purposes
     }
     deleteTask(taskToDelete) {
-        console.log('list before =', toDoList);
         this.arrayOfTasks = this.arrayOfTasks.filter(task => {
             if (task.id != taskToDelete) {
                 return true;
             }
             return false;
         })
-        console.log('list after =', toDoList);
         pushIntoLocalStorage();
     }
     editTask(idOfTaskToEdit, newTask) {
-        let taskToFind = this.arrayOfTasks.find(task => task.getID === idOfTaskToEdit)
+        let taskToFind = this.arrayOfTasks.find(task => {
+            if(task.getID() == idOfTaskToEdit)
+                return true; //we want this task
+        })
+        console.log('taskToFind=',taskToFind);
+        console.log('newTask=',newTask);
         taskToFind.setTitle(newTask.getTitle());
         taskToFind.setDescription(newTask.getDescription())
         taskToFind.setDeadline(newTask.getDeadline())
         taskToFind.setIsActive(newTask.getIsActive())
+        console.log(`edited task ${idOfTaskToEdit} successfully`);
     }
     getTaskByID(idOfTask) { return this.arrayOfTasks.find(task => task.getID() == idOfTask) }
     getTaskIDs() { return this.taskIDs; }
     setTaskIDs(newTaskIDs) { this.taskIDs = newTaskIDs; }
     getAllTasks() { return this.arrayOfTasks }
     statusChangeTask(taskID) {
-        console.log(this.getTaskByID(taskID));
-
         this.arrayOfTasks.forEach(task => {
             if(task.getID() == taskID)
             {
@@ -84,18 +77,15 @@ class ToDoList {
                     task.setIsActive(true);
             }
         })
-
-        console.log(`changed status from ${!this.getTaskByID(taskID).getIsActive()} to ${this.getTaskByID(taskID).getIsActive()}`);
     }
 }
 
 //Global Parameters
-let toDoList;
+let toDoList, taskToEdit;
 
 //Functions
 function createTaskHtml(task) {
     let str = `<div class="task">`
-    console.log('task details=',task.getIsActive());
     if(task.getIsActive() == true)
         str+= `<div class="taskTitle"><i class="far status ${task.getID()} fa-square"></i><h3>${task.getTitle()}</h3></div>`;
     else
@@ -139,13 +129,33 @@ function handleStatusChange(event) {
     }
     toDoList.statusChangeTask(event.target.classList[2])
     pushIntoLocalStorage();
-    console.log(toDoList);
 }
 function handleEdit(event) {
+    if(document.querySelector('#createTaskForm').style.visibility == 'visible')
+        document.querySelector('#createTaskForm').style.visibility = 'hidden';
     console.log(`edit task id=`, event.target.classList[3]);
+    taskToEdit = toDoList.getTaskByID(event.target.classList[3])
+    console.log(`taskToEdit=`,taskToEdit);
+    document.querySelector("#editTaskForm").style.visibility = 'visible';
+    document.querySelector('#editTitleInput').value = taskToEdit.getTitle()
+    document.querySelector('#editDescriptionInput').value = taskToEdit.getDescription();
+    document.querySelector('#editDeadlineInput').value = taskToEdit.getDeadline();
+
+    //remove old event listeners, it was doing a problem.
+    let oldBtn = document.querySelector('#editConfirm')
+    let newBtn = oldBtn.cloneNode(true);
+    oldBtn.parentNode.replaceChild(newBtn,oldBtn)
+
+    document.querySelector('#editConfirm').addEventListener('click', function() {
+        let newTask = new Task(9999999,document.querySelector('#editTitleInput').value,document.querySelector('#editDescriptionInput').value,document.querySelector('#editDeadlineInput').value,true)
+        toDoList.editTask(event.target.classList[3],newTask)
+        pushIntoLocalStorage();
+        console.log(toDoList);
+        createListHtml();
+        document.querySelector("#editTaskForm").style.visibility = 'hidden';
+    })
 }
 function handleDelete(event) {
-    console.log(`delete task id=`, event.target.classList[3]);
     toDoList.deleteTask(event.target.classList[3]);
     createListHtml();
 }
@@ -167,12 +177,15 @@ function resetInputFields() {
     document.querySelector("#taskDescriptionInput").value = '';
     document.querySelector("#taskDeadlineInput").value = '';
 }
-
 // Event Listeners
 document.querySelector("#showTasksBtn").addEventListener('click', function () {
+    document.querySelector('#editTaskForm').style.visibility = 'hidden';
+    document.querySelector('#createTaskForm').style.visibility = 'hidden';
     createListHtml();
 })
 document.querySelector("#createTaskBtn").addEventListener('click', function () {
+    if(document.querySelector('#editTaskForm').style.visibility == 'visible')
+        document.querySelector('#editTaskForm').style.visibility = 'hidden';
     let now = new Date();
     let utcString = now.toISOString().substring(0, 19);
     let year = now.getFullYear();
@@ -206,4 +219,10 @@ window.onload = function () {
     pullFromLocalStorage();
     console.log('toDoList=', toDoList);
     createListHtml();
+    document.querySelector('#closeCreate').addEventListener('click',function (){
+        document.querySelector('#createTaskForm').style.visibility = 'hidden';
+    })
+    document.querySelector('#closeEdit').addEventListener('click',function (){
+        document.querySelector('#editTaskForm').style.visibility = 'hidden';
+    })
 }

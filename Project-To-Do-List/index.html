@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Mahde - To Do List</title>
 </head>
+
 <body>
     <div id="pageContainer">
         <div id="flexContainer">
@@ -22,25 +24,48 @@
                 </div>
             </div>
             <div id="toDoListContainer">
-                
+
             </div>
         </div>
-        <div id="createTaskForm">
-            <div>
-                <span>Task title:</span><input type="text" id='taskTitleInput'>
+        <div id="formsContainer">
+            <div id="createTaskForm">
+                <div>
+                    <span><i class="far fa-window-close" id='closeCreate'></i> Create new task:</span>
+                </div>
+                <div>
+                    <span>Task title:</span><input type="text" id='taskTitleInput'>
+                </div>
+                <div>
+                    <span>Task description:</span><input type="text" id='taskDescriptionInput'>
+                </div>
+                <div>
+                    <span>Task deadline:</span><input type="datetime-local" id='taskDeadlineInput'>
+                </div>
+                <div>
+                    <span>Confirm: </span><input type="button" value='Save' id='taskCreateConfirm'>
+                </div>
             </div>
-            <div>
-                <span>Task description:</span><input type="text" id='taskDescriptionInput'>
-            </div>
-            <div>
-                <span>Task deadline:</span><input type="datetime-local" id='taskDeadlineInput'>
-            </div>
-            <div>
-                <span>Confirm: </span><input type="button" value='Save' id='taskCreateConfirm'>
+            <div id="editTaskForm">
+                <div>
+                    <span><i class="far fa-window-close" id='closeEdit'></i> Edit task:</span>
+                </div>
+                <div>
+                    <span>Task title:</span><input type="text" id='editTitleInput'>
+                </div>
+                <div>
+                    <span>Task description:</span><input type="text" id='editDescriptionInput'>
+                </div>
+                <div>
+                    <span>Task deadline:</span><input type="datetime-local" id='editDeadlineInput'>
+                </div>
+                <div>
+                    <span>Confirm: </span><input type="button" value='Save' id='editConfirm'>
+                </div>
             </div>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/012f5575a6.js" crossorigin="anonymous"></script>
     <script src="./js/ToDoLogic.js"></script>
 </body>
+
 </html>
