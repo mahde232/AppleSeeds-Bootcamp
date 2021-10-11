@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Mahde - To Do List</title>
+</head>
+<body>
+    <div id="pageContainer">
+        <div id="flexContainer">
+            <div id="header">
+                <h1>Mahde's To-do List</h1>
+                <div id="actionsList">
+                    <div class="operation" id="showTasksBtn">
+                        <span>Show all tasks</span>
+                    </div>
+                    <div class="operation" id="createTaskBtn">
+                        <span>Add To-do Task</span>
+                    </div>
+                </div>
+            </div>
+            <div id="toDoListContainer">
+                
+            </div>
+        </div>
+        <div id="createTaskForm">
+            <div>
+                <span>Task title:</span><input type="text" id='taskTitleInput'>
+            </div>
+            <div>
+                <span>Task description:</span><input type="text" id='taskDescriptionInput'>
+            </div>
+            <div>
+                <span>Task deadline:</span><input type="datetime-local" id='taskDeadlineInput'>
+            </div>
+            <div>
+                <span>Confirm: </span><input type="button" value='Save' id='taskCreateConfirm'>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/012f5575a6.js" crossorigin="anonymous"></script>
+    <script src="./js/ToDoLogic.js"></script>
+</body>
+</html>

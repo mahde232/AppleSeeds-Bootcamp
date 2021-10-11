@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #ecf0f1;
+}
+/* body::-webkit-scrollbar {
+    display: none;
+} */
+#pageContainer {
+    margin-top: 4vh;
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    width: 99vw;
+    display: flex;
+    background: #ecf0f1;
+    font-size: 20px;
+    justify-content: center;
+}
+#flexContainer {
+    display: flex;
+    flex-direction: column;
+}
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background: red; */
+}
+h1 {
+    margin-bottom: 1vh;
+}
+h3 {
+    display: inline-block;
+}
+.taskControls i {
+    margin-right: 1vw;
+}
+i:hover {
+    cursor: pointer;
+}
+#actionsList {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background: blue; */
+    width: 20vw;
+}
+.operation {
+    background: #ccc;
+    outline: 2px solid black;
+    border-radius: 5px;
+    padding: 1vh 1vw;
+    margin: 0 1vw;
+}
+.operation:hover {
+    background: grey;
+    cursor: pointer;
+}
+#createTaskForm {
+    visibility: hidden;
+    margin-top: 12vh;
+}
+.task {
+    display: flex;
+    flex-direction: column;
+    /* outline: 1px solid black; */
+    border: 1px solid black;
+    margin-bottom: 5vh;
+    width: 40vw;
+    padding: 0 1vw;
+}
+#toDoListContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: lightblue;
+    /* height: 80vh; */
+    width: 50vw;
+    padding: 1vh 0;
+    margin-top: 1vh;
+    /* overflow: scroll;
+    overflow-x: hidden; */
+}
+/* #toDoListContainer::-webkit-scrollbar {
+    display: none;
+} */
+.status {
+    margin-right: 3px;
+}
