@@ -1,3 +1,8 @@
+//ToDo:
+//add date of creation for tasks.
+//input validations
+//fix overfrom on title + descriptions
+
 //class declarations
 class Task {
     constructor(id, title, description, deadLine, active=true) {
@@ -55,13 +60,10 @@ class ToDoList {
             if(task.getID() == idOfTaskToEdit)
                 return true; //we want this task
         })
-        console.log('taskToFind=',taskToFind);
-        console.log('newTask=',newTask);
         taskToFind.setTitle(newTask.getTitle());
         taskToFind.setDescription(newTask.getDescription())
         taskToFind.setDeadline(newTask.getDeadline())
         taskToFind.setIsActive(newTask.getIsActive())
-        console.log(`edited task ${idOfTaskToEdit} successfully`);
     }
     getTaskByID(idOfTask) { return this.arrayOfTasks.find(task => task.getID() == idOfTask) }
     getTaskIDs() { return this.taskIDs; }
@@ -114,7 +116,7 @@ function createListHtml() {
         })
     }
     else
-    document.querySelector("#toDoListContainer").innerHTML = 'Your to-do list is empty';
+        document.querySelector("#toDoListContainer").innerHTML = 'Your to-do list is empty';
 }
 function handleStatusChange(event) {
     switch (event.target.classList[3]) {
@@ -133,24 +135,21 @@ function handleStatusChange(event) {
 function handleEdit(event) {
     if(document.querySelector('#createTaskForm').style.visibility == 'visible')
         document.querySelector('#createTaskForm').style.visibility = 'hidden';
-    console.log(`edit task id=`, event.target.classList[3]);
     taskToEdit = toDoList.getTaskByID(event.target.classList[3])
-    console.log(`taskToEdit=`,taskToEdit);
     document.querySelector("#editTaskForm").style.visibility = 'visible';
     document.querySelector('#editTitleInput').value = taskToEdit.getTitle()
     document.querySelector('#editDescriptionInput').value = taskToEdit.getDescription();
     document.querySelector('#editDeadlineInput').value = taskToEdit.getDeadline();
+    document.querySelector("#editDeadlineInput").min = taskToEdit.getDeadline();
 
     //remove old event listeners, it was doing a problem.
-    let oldBtn = document.querySelector('#editConfirm')
-    let newBtn = oldBtn.cloneNode(true);
+    let oldBtn = document.querySelector('#editConfirm'), newBtn = oldBtn.cloneNode(true);
     oldBtn.parentNode.replaceChild(newBtn,oldBtn)
 
     document.querySelector('#editConfirm').addEventListener('click', function() {
         let newTask = new Task(9999999,document.querySelector('#editTitleInput').value,document.querySelector('#editDescriptionInput').value,document.querySelector('#editDeadlineInput').value,true)
         toDoList.editTask(event.target.classList[3],newTask)
         pushIntoLocalStorage();
-        console.log(toDoList);
         createListHtml();
         document.querySelector("#editTaskForm").style.visibility = 'hidden';
     })
@@ -186,38 +185,34 @@ document.querySelector("#showTasksBtn").addEventListener('click', function () {
 document.querySelector("#createTaskBtn").addEventListener('click', function () {
     if(document.querySelector('#editTaskForm').style.visibility == 'visible')
         document.querySelector('#editTaskForm').style.visibility = 'hidden';
-    let now = new Date();
-    let utcString = now.toISOString().substring(0, 19);
-    let year = now.getFullYear();
-    let month = now.getMonth() + 1;
-    let day = now.getDate();
-    let hour = now.getHours();
-    let minute = now.getMinutes();
-    // let second = now.getSeconds();
-    let localDatetime = year + "-" +
+    let now = new Date(), utcString = now.toISOString().substring(0, 19),
+    year = now.getFullYear(),
+    month = now.getMonth() + 1,
+    day = now.getDate(),
+    hour = now.getHours(),
+    minute = now.getMinutes(),
+    localDatetime = year + "-" +
         (month < 10 ? "0" + month.toString() : month) + "-" +
         (day < 10 ? "0" + day.toString() : day) + "T" +
         (hour < 10 ? "0" + hour.toString() : hour) + ":" +
         (minute < 10 ? "0" + minute.toString() : minute) +
         utcString.substring(16, 19);
-    document.getElementById("taskDeadlineInput").value = localDatetime;
+    document.querySelector("#taskDeadlineInput").value = localDatetime;
+    document.querySelector("#taskDeadlineInput").min = localDatetime;
     document.querySelector("#createTaskForm").style.visibility = 'visible';
 })
 document.querySelector("#taskCreateConfirm").addEventListener('click', function () {
-    let temp = toDoList.addTask(document.querySelector("#taskTitleInput").value,
+    toDoList.addTask(document.querySelector("#taskTitleInput").value,
         document.querySelector("#taskDescriptionInput").value, document.querySelector("#taskDeadlineInput").value);
-    console.log('task created=', temp);
     resetInputFields();
     document.querySelector("#createTaskForm").style.visibility = 'hidden';
     setTimeout(() => {
-        // alert('task added');
         createListHtml();
     }, 200);
 })
 window.onload = function () {
     toDoList = new ToDoList();
     pullFromLocalStorage();
-    console.log('toDoList=', toDoList);
     createListHtml();
     document.querySelector('#closeCreate').addEventListener('click',function (){
         document.querySelector('#createTaskForm').style.visibility = 'hidden';

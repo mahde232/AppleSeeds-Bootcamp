@@ -33,16 +33,16 @@
                     <span><i class="far fa-window-close" id='closeCreate'></i> Create new task:</span>
                 </div>
                 <div>
-                    <span>Task title:</span><input type="text" id='taskTitleInput'>
+                    <span>Task title:</span><input type="text" id='taskTitleInput' required>
                 </div>
                 <div>
                     <span>Task description:</span><input type="text" id='taskDescriptionInput'>
                 </div>
                 <div>
-                    <span>Task deadline:</span><input type="datetime-local" id='taskDeadlineInput'>
+                    <span>Task deadline:</span><input type="datetime-local" id='taskDeadlineInput' required>
                 </div>
                 <div>
-                    <span>Confirm: </span><input type="button" value='Save' id='taskCreateConfirm'>
+                    <span>Confirm: </span><input type="submit" value='Save' id='taskCreateConfirm'>
                 </div>
             </div>
             <div id="editTaskForm">
@@ -50,13 +50,13 @@
                     <span><i class="far fa-window-close" id='closeEdit'></i> Edit task:</span>
                 </div>
                 <div>
-                    <span>Task title:</span><input type="text" id='editTitleInput'>
+                    <span>Task title:</span><input type="text" id='editTitleInput' required>
                 </div>
                 <div>
                     <span>Task description:</span><input type="text" id='editDescriptionInput'>
                 </div>
                 <div>
-                    <span>Task deadline:</span><input type="datetime-local" id='editDeadlineInput'>
+                    <span>Task deadline:</span><input type="datetime-local" id='editDeadlineInput' required>
                 </div>
                 <div>
                     <span>Confirm: </span><input type="button" value='Save' id='editConfirm'>
