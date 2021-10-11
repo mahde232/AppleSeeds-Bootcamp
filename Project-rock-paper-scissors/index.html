@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Mahde - Rock Paper Scissors</title>
+</head>
+<body>
+    <div id="pageContainer">
+        <div id="scoreBoard">
+            <div id="player1Scoreboard">
+                <span>Player-1 Score = </span><span id='player1score'>0</span>
+            </div>
+            <div id="player2Scoreboard">
+                <span>Player-2 Score = </span><span id='player2score'>0</span>
+            </div>
+        </div>
+        <div id="playersView">
+            <div id="player1">
+                <span>Actions available:</span>
+                <button class='playerAction'>Rock</button>
+                <button class='playerAction'>Paper</button>
+                <button class='playerAction'>Scissors</button>
+            </div>
+            <div id="gameFlow">
+                <span>Game flow:</span>
+                <div id='gameSimulations'>
+                </div>
+            </div>
+            <div id="player2">
+                <span>Actions list:</span>
+                <div id='player2Actions'></div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/gameLogic.js"></script>
+</body>
+</html>

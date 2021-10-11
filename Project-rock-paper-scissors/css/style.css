@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #ecf0f1;
+    text-align: center;
+}
+#pageContainer {
+    height: 100vh;
+    width: 99vw;
+    display: flex;
+    flex-direction: column;
+    background: #ecf0f1;
+    justify-content: flex-start;
+    align-items: center;
+}
+#scoreBoard {
+    display: flex;
+    justify-content: space-between;
+    height: 20vh;
+    width: 40vw;
+    background: red;
+}
+#playersView {
+    display: flex;
+    height: 60vh;
+    width: 40vw;
+    background: blue;
+    justify-content: space-between;
+}
+#player1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: pink;
+}
+#player2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: pink;
+    overflow: visible;
+    overflow-x: hidden;
+}
+#gameFlow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* background: green; */
+    overflow: visible;
+    overflow-x: hidden;
+    width: 25vw;
+}
+.playerAction {
+    margin: 1vh 0;
+}
