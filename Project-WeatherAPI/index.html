@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Mahde's Weather-API</title>
+</head>
+<body>
+    <header>
+        <h1>Mahde's Weather Service</h1>
+        <h4>powered by <a href="https://openweathermap.org/current" target="_blank">OpenWeather's API</a></h4>
+    </header>
+    <section id="pageContainer">
+        <h3>Your current location:</h3>
+        <div id="currentLocationArea">Please Allow Geolocation</div>
+        <div id='searchArea'>
+            <form autocomplete="off" onsubmit="return false">
+                <input type="text" name="searchField" id="searchField" placeholder='Search here, example: London / Tel Aviv'>
+                <input type="button" name="searchBtn" id="searchBtn" value='Search'>
+            </form>
+        </div>
+        <div id="searchResultsArea"></div>
+    </section>
+    <footer>
+        <div id='copyright'>
+            <div>Mahde Halabi &copy; <a href="https://mahde-halabi.netlify.app" target="_blank">Portfolio</a></div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/012f5575a6.js" crossorigin="anonymous"></script>
+    <script src="./js/indexController.js"></script>
+</body>
+</html>

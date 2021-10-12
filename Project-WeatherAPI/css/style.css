@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #ecf0f1;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 7vh;
+    margin-top: 2vh;
+}
+#pageContainer {
+    height: 91vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    /* background: red; */
+    align-items: center;
+    padding: 1rem;
+}
+#searchArea form {
+    display: flex;
+}
+#searchField {
+    width: 90vw;
+    height: 5vh;
+    border: 0px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+#searchBtn {
+    visibility: hidden;
+}
+#currentLocationArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#searchResultsArea {
+    padding: 1rem;
+    width: 96vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+.weatherItem {
+    min-width: 12vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #ccc;
+    outline: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.overview {
+    margin: 5px 0;
+}
+.tempsFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+.tempText {
+    font-weight: 600;
+}
+.tempValue {
+    font-size: 14px;
+}
+.deleteIcon {
+    cursor: pointer;
+    margin-top: 5px;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgrey;
+    text-align: center;
+}
+
+@media only screen and (max-width: 820px) {
+    #searchResultsArea {
+        justify-content: center;
+        align-items: center;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+}
