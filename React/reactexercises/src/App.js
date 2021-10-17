@@ -3,7 +3,7 @@ import './App.css';
 // import Basics from './components/2.2-basics-of-jsx/2.2-basics-of-jsx';
 // import Boxes from './components/3.1-boxes/3.1-boxes';
 // import Quiz from './components/3.2-quiz/3.2-quiz';
-import Buttons from './components/4.1-buttons/Buttons';
+// import Button from './components/4.1-buttons/Button';
 
 function App() {
   return (
@@ -13,7 +13,8 @@ function App() {
       {/* <Basics/> */}
       {/* <Boxes/> */}
       {/* <Quiz/> */}
-      <Buttons/>
+      {/* <Button name='Important' weight='900'/>
+      <Button name='Not Important' weight='100'/> */}
     </div>
   );
 }
