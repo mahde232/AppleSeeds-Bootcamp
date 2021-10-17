@@ -16,9 +16,11 @@ function App() {
       {/* <Quiz/> */}
       {/* <Button name='Important' weight='900'/>
       <Button name='Not Important' weight='100'/> */}
-      <Card imgURL='https://picsum.photos/200' title='Picture 1' description='Random Description for picture 1'/>
-      <Card imgURL='https://picsum.photos/200' title='Picture 2' description='Random Description for picture 2'/>
-      <Card imgURL='https://picsum.photos/200' title='Picture 3' description='Random Description for picture 3'/>
+      <div style={{display: 'flex', justifyContent: 'space-around'}}>
+        <Card imgURL='https://source.unsplash.com/random' title='Picture 1' description='Random Description for picture 1'/>
+        <Card imgURL='https://picsum.photos/100/200' title='Picture 2' description='Random Description for picture 2'/>
+        <Card imgURL='https://loremflickr.com/100/200' title='Picture 3' description='Random Description for picture 3'/>
+      </div>
     </div>
   );
 }
