@@ -1,7 +1,6 @@
 const QuizTitle = () => {
     return <h2>How Do You Like Front End?</h2>
 }
-
 const Q1Title = () => {
     return <h3>How Much you love front end?</h3>
 }
@@ -28,9 +27,9 @@ const Q2 = () => {
         <Q2Input/>
     </div>
 }
-
 const Quiz = () => {
     return <div>
+        <QuizTitle/>
         <Q1/>
         <Q2/>
     </div>
