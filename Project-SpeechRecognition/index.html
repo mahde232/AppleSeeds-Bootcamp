@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Mahde-Speech Recognition</title>
+</head>
+<body>
+    <div id='#pageContainer'>
+            <select name="langaugeSelect" id="langaugeSelect">
+                <option value="en-US">English</option>
+                <option value="he-IL">Hebrew</option>
+                <option value="ar-IL">Arabic</option>
+            </select>
+            <div><button id='speechBtn'>Click me</button></div>
+            <div id='speechDiv'></div>
+            <div id='result' style="visibility: hidden;">
+                <div>Recognized speech:</div>
+                <div id='speechResultsDiv'></div>
+            </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
