@@ -14,10 +14,11 @@ class Card extends React.Component {
     render() {
         console.log('props=',this.props);
         return <div className='card'>
-        <img src={this.imgURL} repeat='no-repeat' height='200px'></img>
-        <h2>{this.title}</h2>
-        <p>{this.description}</p>
+        <img src={this.props.imgURL} repeat='no-repeat' height='200px'></img>
+        <h2>{this.props.title}</h2>
+        <p>{this.props.description}</p>
         <div className='links'><a href='#' className='link'>Share</a> <a href='#' className='link'>Explore</a></div>
+        {this.props.children}
     </div>
     }
 }
