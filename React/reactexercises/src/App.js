@@ -25,6 +25,9 @@ function App() {
       </div> */}
       <div style={{display: 'flex', justifyContent: 'space-around'}}>
         <Card imgURL='https://source.unsplash.com/random' title='Picture 1' description='Random Description for picture 1'/>
+        <Card>
+          <button>Test</button>
+        </Card>
         <Card imgURL='https://picsum.photos/100/200' title='Picture 2' description='Random Description for picture 2'/>
       </div>
 
