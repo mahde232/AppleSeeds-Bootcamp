@@ -1,0 +1,14 @@
+.card {
+    outline: 1px solid black;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.links {
+    display: flex;
+    justify-content: space-around;
+}
+.link {
+    color: orange;
+    margin: 10px;
+}
