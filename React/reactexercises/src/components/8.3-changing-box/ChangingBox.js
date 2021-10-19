@@ -23,10 +23,7 @@ class ChangingBox extends React.Component {
             })
     }
     componentDidMount = () => {
-        setTimeout(this.changeColorsFunc, 500);
-    }
-    componentDidUpdate = () => {
-        setTimeout(this.changeColorsFunc, 500);
+        setInterval(this.changeColorsFunc, 500);
     }
     render() {
         if(this.state.shape === 'box')

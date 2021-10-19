@@ -12,6 +12,7 @@ import './App.css';
 // import MyComponent from './components/8.1-life-cycle-methods/MyComponent';
 // import AnimatedBox from './components/8.2-box-animations/AnimatedBox';
 import ChangingBox from './components/8.3-changing-box/ChangingBox';
+// import Spinner from './components/9.1-spinner/Spinner';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
       <AnimatedBox/>
       <AnimatedBox/> */}
       <ChangingBox/>
+      {/* <Spinner isActive={true}/> */}
     </div>
   );
 }
