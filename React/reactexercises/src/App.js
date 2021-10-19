@@ -10,7 +10,8 @@ import './App.css';
 // import Counter from './components/7.1-increment/Counter';
 // import DisappearingBox from './components/7.2-hide-and-seek/DisappearingBox';
 // import MyComponent from './components/8.1-life-cycle-methods/MyComponent';
-import AnimatedBox from './components/8.2-box-animations/AnimatedBox';
+// import AnimatedBox from './components/8.2-box-animations/AnimatedBox';
+import ChangingBox from './components/8.3-changing-box/ChangingBox';
 
 function App() {
   return (
@@ -37,9 +38,10 @@ function App() {
       {/* <Counter /> */}
       {/* <DisappearingBox/> */}
       {/* <MyComponent/> */}
+      {/* <AnimatedBox/>
       <AnimatedBox/>
-      <AnimatedBox/>
-      <AnimatedBox/>
+      <AnimatedBox/> */}
+      <ChangingBox/>
     </div>
   );
 }
