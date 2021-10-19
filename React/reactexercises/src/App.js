@@ -8,7 +8,8 @@ import './App.css';
 // import randomImage from './components/4.2-cards/img/img1.png'
 // import Card from './components/6.1-class-based-components/Card';
 // import Counter from './components/7.1-increment/Counter';
-import DisappearingBox from './components/7.2-hide-and-seek/DisappearingBox';
+// import DisappearingBox from './components/7.2-hide-and-seek/DisappearingBox';
+import MyComponent from './components/8.1-life-cycle-methods/MyComponent';
 
 function App() {
   return (
@@ -33,7 +34,8 @@ function App() {
         <Card imgURL='https://picsum.photos/100/200' title='Picture 2' description='Random Description for picture 2'/>
       </div> */}
       {/* <Counter /> */}
-      <DisappearingBox/>
+      {/* <DisappearingBox/> */}
+      <MyComponent/>
     </div>
   );
 }
