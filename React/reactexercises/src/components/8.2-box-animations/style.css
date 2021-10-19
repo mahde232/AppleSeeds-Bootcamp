@@ -1,0 +1,13 @@
+.box {
+    margin-bottom: 1px;
+    animation-name: slideIn;
+    animation-duration: 1s;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-200px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
