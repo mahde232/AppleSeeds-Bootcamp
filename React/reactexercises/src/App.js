@@ -1,4 +1,5 @@
 import './App.css';
+import Q11_3 from './components/11.3-form-review/main';
 // import HelloWorld from './components/2.1-hello-world/2.1.helloWorld';
 // import Basics from './components/2.2-basics-of-jsx/2.2-basics-of-jsx';
 // import Boxes from './components/3.1-boxes/3.1-boxes';
@@ -15,7 +16,7 @@ import './App.css';
 // import Spinner from './components/9.1-spinner/Spinner';
 // import ChuckNorris from './components/12.1-ChuckNorrisAPI/ChuckNorrisAPI';
 // import Q11_1 from './components/11.1-child-to-father/main';
-import Checkbox from './components/11.2-checkbox/Checkbox';
+// import Checkbox from './components/11.2-checkbox/Checkbox';
 
 function App() {
   return (
@@ -49,12 +50,13 @@ function App() {
       {/* <Spinner isActive={true}/> */}
       {/* <ChuckNorris></ChuckNorris> */}
       {/* <Q11_1></Q11_1> */}
-      <div>
+      {/* <div>
         <Checkbox text='I read the terms of the app' isChecked=''></Checkbox>
         <Checkbox text='I accept the terms of the app' isChecked=''></Checkbox>
         <Checkbox text='I want to get weekly news letter' isChecked='true'></Checkbox>
         <Checkbox text='I want to get sales and offers' isChecked='true'></Checkbox>
-      </div>
+      </div> */}
+      <Q11_3></Q11_3>
     </div>
   );
 }
