@@ -39,7 +39,7 @@ class ChuckNorris extends React.Component {
         <div>
             <select id='categoriesSelect'>
                 {this.state.categoriesArray.map(element => {
-                    return <option value={element}>{element.charAt(0).toUpperCase() + element.slice(1)}</option>
+                    return <option key={element} value={element}>{element.charAt(0).toUpperCase() + element.slice(1)}</option>
                 })}
             </select>
             <button onClick={this.fetchJokeByCategory}>Give me a joke</button>
