@@ -13,7 +13,8 @@ import './App.css';
 // import AnimatedBox from './components/8.2-box-animations/AnimatedBox';
 // import ChangingBox from './components/8.3-changing-box/ChangingBox';
 // import Spinner from './components/9.1-spinner/Spinner';
-import ChuckNorris from './components/12.1-ChuckNorrisAPI/ChuckNorrisAPI';
+// import ChuckNorris from './components/12.1-ChuckNorrisAPI/ChuckNorrisAPI';
+import Q11_1 from './components/11.1-child-to-father/main';
 
 function App() {
   return (
@@ -45,7 +46,8 @@ function App() {
       <AnimatedBox/> */}
       {/* <ChangingBox/> */}
       {/* <Spinner isActive={true}/> */}
-      <ChuckNorris></ChuckNorris>
+      {/* <ChuckNorris></ChuckNorris> */}
+      <Q11_1></Q11_1>
     </div>
   );
 }
