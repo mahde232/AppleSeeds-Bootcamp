@@ -14,7 +14,8 @@ import './App.css';
 // import ChangingBox from './components/8.3-changing-box/ChangingBox';
 // import Spinner from './components/9.1-spinner/Spinner';
 // import ChuckNorris from './components/12.1-ChuckNorrisAPI/ChuckNorrisAPI';
-import Q11_1 from './components/11.1-child-to-father/main';
+// import Q11_1 from './components/11.1-child-to-father/main';
+import Checkbox from './components/11.2-checkbox/Checkbox';
 
 function App() {
   return (
@@ -47,7 +48,13 @@ function App() {
       {/* <ChangingBox/> */}
       {/* <Spinner isActive={true}/> */}
       {/* <ChuckNorris></ChuckNorris> */}
-      <Q11_1></Q11_1>
+      {/* <Q11_1></Q11_1> */}
+      <div>
+        <Checkbox text='I read the terms of the app' isChecked=''></Checkbox>
+        <Checkbox text='I accept the terms of the app' isChecked=''></Checkbox>
+        <Checkbox text='I want to get weekly news letter' isChecked='true'></Checkbox>
+        <Checkbox text='I want to get sales and offers' isChecked='true'></Checkbox>
+      </div>
     </div>
   );
 }
