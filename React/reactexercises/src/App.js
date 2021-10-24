@@ -17,7 +17,8 @@ import './App.css';
 // import Q11_1 from './components/11.1-child-to-father/main';
 // import Checkbox from './components/11.2-checkbox/Checkbox';
 // import Q11_3 from './components/11.3-form-review/main';
-import DataMassaging from './components/13.1-data-massaging/DataMassaging';
+// import DataMassaging from './components/13.1-data-massaging/DataMassaging';
+import Avatars from './components/13.2-avatars/Avatars';
 
 function App() {
   return (
@@ -58,7 +59,8 @@ function App() {
         <Checkbox text='I want to get sales and offers' isChecked='true'></Checkbox>
       </div> */}
       {/* <Q11_3></Q11_3> */}
-      <DataMassaging />
+      {/* <DataMassaging /> */}
+      <Avatars />
     </div>
   );
 }

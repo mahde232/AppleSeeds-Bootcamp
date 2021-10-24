@@ -1,0 +1,18 @@
+.avatarCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.peopleContainer {
+    display: flex;
+    justify-content: space-around;
+}
+.avatarIMG {
+    height: 100%;
+    width: 100%;
+}
+.searchField {
+    width: 30vw;
+}
