@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import './style.css'
 
-export default function Text({inputText,maxLength}) {
+export default function Text({inputText,maxAllowedLength}) {
     const [text] = useState(inputText)
-    const [lengthToShow, setLength] = useState(maxLength)
+    const [lengthToShow, setLength] = useState(maxAllowedLength)
     const [isExpanded, setExpanded] = useState(false)
 
-    const showMore = () => {
-        isExpanded ? setLength(maxLength) : setLength(text.length)
+    const showMoreLess = () => {
+        isExpanded ? setLength(maxAllowedLength) : setLength(text.length)
         setExpanded(!isExpanded)
     }
 
@@ -15,7 +15,7 @@ export default function Text({inputText,maxLength}) {
         <div>{text.slice(0,lengthToShow).split('').map(letter => {
             return letter
         })}
-        {isExpanded ? '' : '...'} <a className='showMoreLess' onClick={showMore}>{isExpanded ? <span>Show less</span> : <span>Show more</span>}</a>
+        {isExpanded ? '' : '...'} <a className='showMoreLess' onClick={showMoreLess}>{isExpanded ? <span>Show less</span> : <span>Show more</span>}</a>
         </div>
     )
 }
