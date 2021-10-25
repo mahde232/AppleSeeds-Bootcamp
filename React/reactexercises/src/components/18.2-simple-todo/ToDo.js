@@ -12,14 +12,10 @@ export default function ToDo() {
     const changeSubjectStatus = (e) => {
         //setAbc(abc => abc.filter(key => key.id === props.xyz)); this removes a specific key from the array of objects
     
-        //first attempt, works (change data-key to 'course.name')
-        // let tempArray = [...coursesArray];
-        // let indexOfCourse = tempArray.findIndex( course => course.name === e.target.getAttribute('data-key'))
-        // tempArray[indexOfCourse].completed = !tempArray[indexOfCourse].completed
-        // setCourses(tempArray)
-        setCourses([...coursesArray, 
-            {name: e.target.getAttribute('data-key'), completed: !(e.target.getAttribute('data-completed').toLowerCase() === 'true')}
-        ])
+        let tempArray = [...coursesArray];
+        let indexOfCourse = tempArray.findIndex( course => course.name === e.target.getAttribute('data-key'))
+        tempArray[indexOfCourse].completed = !tempArray[indexOfCourse].completed
+        setCourses(tempArray)
     }
     return (
         <div>
