@@ -1,0 +1,6 @@
+.showMoreLess {
+    color: blue;
+}
+.showMoreLess:hover {
+    cursor: pointer;
+}

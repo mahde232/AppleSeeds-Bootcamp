@@ -18,7 +18,8 @@ import './App.css';
 // import Checkbox from './components/11.2-checkbox/Checkbox';
 // import Q11_3 from './components/11.3-form-review/main';
 // import DataMassaging from './components/13.1-data-massaging/DataMassaging';
-import Avatars from './components/13.2-avatars/Avatars';
+// import Avatars from './components/13.2-avatars/Avatars';
+import Text from './components/18.1-text/Text';
 
 function App() {
   return (
@@ -60,7 +61,8 @@ function App() {
       </div> */}
       {/* <Q11_3></Q11_3> */}
       {/* <DataMassaging /> */}
-      <Avatars />
+      {/* <Avatars /> */}
+      <Text inputText={'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed a veritatis magni facilis ratione itaque sunt debitis earum labore dolor quis aperiam quas placeat iste ex quae beatae fugiat similique harum recusandae modi natus, temporibus sapiente! Tempore veniam unde consectetur.'} maxLength={27} />
     </div>
   );
 }
