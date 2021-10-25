@@ -15,7 +15,7 @@ export default function Text({inputText,maxAllowedLength}) {
         <div>{text.slice(0,lengthToShow).split('').map(letter => {
             return letter
         })}
-        {isExpanded ? '' : '...'} <a className='showMoreLess' onClick={showMoreLess}>{isExpanded ? <span>Show less</span> : <span>Show more</span>}</a>
+        {isExpanded ? '' : '...'} <a href='#' className='showMoreLess' onClick={showMoreLess}>{isExpanded ? <span>Show less</span> : <span>Show more</span>}</a>
         </div>
     )
 }
