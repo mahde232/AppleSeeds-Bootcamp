@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './style.css'
 
 export default function Text({inputText,maxLength}) {
-    const [text,setText] = useState(inputText)
+    const [text] = useState(inputText)
     const [lengthToShow, setLength] = useState(maxLength)
     const [isExpanded, setExpanded] = useState(false)
 
