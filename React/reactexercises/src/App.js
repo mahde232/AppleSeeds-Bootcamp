@@ -19,7 +19,8 @@ import './App.css';
 // import Q11_3 from './components/11.3-form-review/main';
 // import DataMassaging from './components/13.1-data-massaging/DataMassaging';
 // import Avatars from './components/13.2-avatars/Avatars';
-import Text from './components/18.1-text/Text';
+// import Text from './components/18.1-text/Text';
+import ToDo from './components/18.2-simple-todo/ToDo';
 
 function App() {
   return (
@@ -62,7 +63,8 @@ function App() {
       {/* <Q11_3></Q11_3> */}
       {/* <DataMassaging /> */}
       {/* <Avatars /> */}
-      <Text inputText={'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed a veritatis magni facilis ratione itaque sunt debitis earum labore dolor quis aperiam quas placeat iste ex quae beatae fugiat similique harum recusandae modi natus, temporibus sapiente! Tempore veniam unde consectetur.'} maxLength={27} />
+      {/* <Text inputText={'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed a veritatis magni facilis ratione itaque sunt debitis earum labore dolor quis aperiam quas placeat iste ex quae beatae fugiat similique harum recusandae modi natus, temporibus sapiente! Tempore veniam unde consectetur.'} maxLength={27} /> */}
+      <ToDo />
     </div>
   );
 }
