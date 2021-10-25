@@ -21,8 +21,9 @@ import './App.css';
 // import Avatars from './components/13.2-avatars/Avatars';
 // import Text from './components/18.1-text/Text';
 // import ToDo from './components/18.2-simple-todo/ToDo';
+import Q18_4 from './components/18.4-mark-and-delete';
 // import MovieDetails from './components/19.1-simple-fetch/MovieDetails';
-import WorldCountries from './components/19.2-countries-of-world/WorldCountries';
+// import WorldCountries from './components/19.2-countries-of-world/WorldCountries';
 
 function App() {
   return (
@@ -67,8 +68,9 @@ function App() {
       {/* <Avatars /> */}
       {/* <Text inputText={'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed a veritatis magni facilis ratione itaque sunt debitis earum labore dolor quis aperiam quas placeat iste ex quae beatae fugiat similique harum recusandae modi natus, temporibus sapiente! Tempore veniam unde consectetur.'} maxAllowedLength={27} /> */}
       {/* <ToDo /> */}
+      <Q18_4 />
       {/* <MovieDetails /> */}
-      <WorldCountries />
+      {/* <WorldCountries /> */}
     </div>
   );
 }
