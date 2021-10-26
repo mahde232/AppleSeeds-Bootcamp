@@ -24,7 +24,8 @@ import './App.css';
 // import Q18_4 from './components/18.4-mark-and-delete';
 // import MovieDetails from './components/19.1-simple-fetch/MovieDetails';
 // import WorldCountries from './components/19.2-countries-of-world/WorldCountries';
-import Alogolia from './components/19.3-algolia/Alogolia';
+// import Alogolia from './components/19.3-algolia/Alogolia';
+import AxiosCRUD from './components/17.1-crud-with-axios/AxiosCRUD';
 
 function App() {
   return (
@@ -72,7 +73,8 @@ function App() {
       {/* <Q18_4 /> */}
       {/* <MovieDetails /> */}
       {/* <WorldCountries /> */}
-      <Alogolia />
+      {/* <Alogolia /> */}
+      <AxiosCRUD />
     </div>
   );
 }
