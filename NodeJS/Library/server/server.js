@@ -21,7 +21,7 @@ app.get('/', (req,res)=>{
     res.status(200).send(`<h1>Welcome To Mahde's Libary API</h1>`)
 })
 
-mongoose.connect(`mongodb+srv://mahde:asdfg12345@cluster0.tdz2o.mongodb.net/Library?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true}, () => {
+mongoose.connect(`mongodb+srv://${process.env.DB_URL}/Library?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true}, () => {
     console.log('Connected to DB');
 });
 // mongoose.connect('mongodb://localhost/Library', {useNewUrlParser: true, useUnifiedTopology: true}, () => {
