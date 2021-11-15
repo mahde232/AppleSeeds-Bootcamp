@@ -17,7 +17,8 @@ const mongoose = require('mongoose');
 //routes + requests
 app.use('/api/books', require('./routes/book.route'));
 app.get('/', (req,res)=>{
-    res.status(200).json(<h1>Welcome To Mahde's Libary API</h1>)
+    res.type('text/html');
+    res.status(200).send(<h1>Welcome To Mahde's Libary API</h1>)
 })
 
 mongoose.connect(`mongodb+srv://${process.env.DB_URL}/Library?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true}, () => {
