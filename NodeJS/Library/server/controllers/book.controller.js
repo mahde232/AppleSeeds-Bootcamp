@@ -1,7 +1,6 @@
 const bookModel = require('../models/book.model').bookModel;
 const validator = require('validator');
 
-
 const getAllBooks = (req, res) => {
     bookModel.find({}, (err, data) => {
         if (err) throw err;

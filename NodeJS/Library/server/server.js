@@ -24,7 +24,4 @@ app.get('/', (req,res)=>{
 mongoose.connect(`mongodb+srv://${process.env.DB_URL}/Library?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true}, () => {
     console.log('Connected to DB');
 });
-// mongoose.connect('mongodb://localhost/Library', {useNewUrlParser: true, useUnifiedTopology: true}, () => {
-//     console.log('Connected to DB');
-// });
 app.listen(process.env.PORT || 4000, ()=> console.log(`Listening to port ${process.env.PORT || 4000}`))
